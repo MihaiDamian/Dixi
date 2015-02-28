@@ -12,58 +12,40 @@ import UIKit
 
 public struct LayoutConstraint {
     
-    struct SizeConstraint {
-        
-        let measure: CGFloat
-        let relation: NSLayoutRelation
-    }
-    
     enum Axis {
         case Horizontal
         case Vertical
     }
     
+    enum LayoutAttribute {
+        case Size
+    }
+    
     var axis = Axis.Horizontal
     
     var leftHandView: UIView!
+    var leftHandAttribute: LayoutAttribute!
+    var relation = NSLayoutRelation.Equal
     var rightHandView: UIView?
-    
-    var sizeConstraint: SizeConstraint?
+    var constant: CGFloat = 0
     
     public var autolayoutConstraint: NSLayoutConstraint {
         return NSLayoutConstraint(item: leftHandView,
-            attribute: leftHandlayoutAttribute,
-            relatedBy: layoutRelation,
+            attribute: autolayoutLeftHandAttribute,
+            relatedBy: relation,
             toItem: rightHandView,
             attribute: .NotAnAttribute,
             multiplier: 1,
             constant: constant)
     }
     
-    private var leftHandlayoutAttribute: NSLayoutAttribute {
-        if let sizeConstraint = sizeConstraint {
-            switch axis {
-            case .Horizontal:
-                return .Width
-            case .Vertical:
-                return .Height
-            }
+    public var autolayoutLeftHandAttribute: NSLayoutAttribute {
+        switch (leftHandAttribute!, axis) {
+        case (.Size, .Horizontal):
+            return .Width
+        case (.Size, .Vertical):
+            return .Height
         }
-        return .NotAnAttribute
-    }
-    
-    private var layoutRelation: NSLayoutRelation {
-        if let sizeConstraint = sizeConstraint {
-            return sizeConstraint.relation
-        }
-        return .Equal
-    }
-    
-    private var constant: CGFloat {
-        if let sizeConstraint = sizeConstraint {
-            return sizeConstraint.measure
-        }
-        return 0
     }
 }
 

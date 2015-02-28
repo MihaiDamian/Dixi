@@ -20,7 +20,9 @@ public func >= <T: CGFloatConvertable> (view: UIView, measure: T) -> LayoutConst
 public func >= (view: UIView, measure: CGFloat) -> LayoutConstraint {
     var constraint = LayoutConstraint()
     constraint.leftHandView = view
-    constraint.sizeConstraint = LayoutConstraint.SizeConstraint(measure: measure, relation: .GreaterThanOrEqual)
+    constraint.leftHandAttribute = .Size
+    constraint.constant = measure
+    constraint.relation = .GreaterThanOrEqual
     return constraint
 }
 
