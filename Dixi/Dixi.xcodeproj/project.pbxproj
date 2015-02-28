@@ -9,7 +9,16 @@
 /* Begin PBXBuildFile section */
 		CBDAAC421AA2114100D3F272 /* Dixi.h in Headers */ = {isa = PBXBuildFile; fileRef = CBDAAC411AA2114100D3F272 /* Dixi.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBDAAC481AA2114100D3F272 /* Dixi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDAAC3C1AA2114100D3F272 /* Dixi.framework */; };
-		CBDAAC4F1AA2114200D3F272 /* DixiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC4E1AA2114200D3F272 /* DixiTests.swift */; };
+		CBDAAC5B1AA2168000D3F272 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC5A1AA2168000D3F272 /* Operators.swift */; };
+		CBDAAC5E1AA2178100D3F272 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC5D1AA2178100D3F272 /* LayoutConstraint.swift */; };
+		CBDAAC601AA2179F00D3F272 /* PartialConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC5F1AA2179F00D3F272 /* PartialConstraint.swift */; };
+		CBDAAC631AA218A200D3F272 /* UIViewOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC621AA218A200D3F272 /* UIViewOperators.swift */; };
+		CBDAAC6A1AA2484C00D3F272 /* CGFloatConvertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC691AA2484C00D3F272 /* CGFloatConvertable.swift */; };
+		CBDAAC6C1AA248A700D3F272 /* Float.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC6B1AA248A700D3F272 /* Float.swift */; };
+		CBDAAC6E1AA248C700D3F272 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC6D1AA248C700D3F272 /* Double.swift */; };
+		CBDAAC701AA248D900D3F272 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC6F1AA248D900D3F272 /* Int.swift */; };
+		CBDAAC731AA24B1B00D3F272 /* ConstraintTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC721AA24B1B00D3F272 /* ConstraintTests.swift */; };
+		CBDAAC761AA24B4300D3F272 /* NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC751AA24B4300D3F272 /* NSLayoutConstraint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,8 +37,17 @@
 		CBDAAC411AA2114100D3F272 /* Dixi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dixi.h; sourceTree = "<group>"; };
 		CBDAAC471AA2114100D3F272 /* DixiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DixiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBDAAC4D1AA2114100D3F272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CBDAAC4E1AA2114200D3F272 /* DixiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DixiTests.swift; sourceTree = "<group>"; };
 		CBDAAC581AA211BD00D3F272 /* Draft.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Draft.playground; path = ../Draft.playground; sourceTree = "<group>"; };
+		CBDAAC5A1AA2168000D3F272 /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		CBDAAC5D1AA2178100D3F272 /* LayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutConstraint.swift; sourceTree = "<group>"; };
+		CBDAAC5F1AA2179F00D3F272 /* PartialConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartialConstraint.swift; sourceTree = "<group>"; };
+		CBDAAC621AA218A200D3F272 /* UIViewOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewOperators.swift; sourceTree = "<group>"; };
+		CBDAAC691AA2484C00D3F272 /* CGFloatConvertable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloatConvertable.swift; sourceTree = "<group>"; };
+		CBDAAC6B1AA248A700D3F272 /* Float.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Float.swift; sourceTree = "<group>"; };
+		CBDAAC6D1AA248C700D3F272 /* Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
+		CBDAAC6F1AA248D900D3F272 /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
+		CBDAAC721AA24B1B00D3F272 /* ConstraintTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintTests.swift; sourceTree = "<group>"; };
+		CBDAAC751AA24B4300D3F272 /* NSLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -74,6 +92,10 @@
 			isa = PBXGroup;
 			children = (
 				CBDAAC411AA2114100D3F272 /* Dixi.h */,
+				CBDAAC5A1AA2168000D3F272 /* Operators.swift */,
+				CBDAAC611AA2188C00D3F272 /* Extensions */,
+				CBDAAC5C1AA2176000D3F272 /* LayoutConstraints */,
+				CBDAAC681AA2481100D3F272 /* Protocols */,
 				CBDAAC3F1AA2114100D3F272 /* Supporting Files */,
 			);
 			path = Dixi;
@@ -90,7 +112,8 @@
 		CBDAAC4B1AA2114100D3F272 /* DixiTests */ = {
 			isa = PBXGroup;
 			children = (
-				CBDAAC4E1AA2114200D3F272 /* DixiTests.swift */,
+				CBDAAC741AA24B2D00D3F272 /* Extensions */,
+				CBDAAC711AA24B1B00D3F272 /* Tests */,
 				CBDAAC4C1AA2114100D3F272 /* Supporting Files */,
 			);
 			path = DixiTests;
@@ -102,6 +125,50 @@
 				CBDAAC4D1AA2114100D3F272 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CBDAAC5C1AA2176000D3F272 /* LayoutConstraints */ = {
+			isa = PBXGroup;
+			children = (
+				CBDAAC5D1AA2178100D3F272 /* LayoutConstraint.swift */,
+				CBDAAC5F1AA2179F00D3F272 /* PartialConstraint.swift */,
+			);
+			path = LayoutConstraints;
+			sourceTree = "<group>";
+		};
+		CBDAAC611AA2188C00D3F272 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CBDAAC621AA218A200D3F272 /* UIViewOperators.swift */,
+				CBDAAC6F1AA248D900D3F272 /* Int.swift */,
+				CBDAAC6B1AA248A700D3F272 /* Float.swift */,
+				CBDAAC6D1AA248C700D3F272 /* Double.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		CBDAAC681AA2481100D3F272 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				CBDAAC691AA2484C00D3F272 /* CGFloatConvertable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		CBDAAC711AA24B1B00D3F272 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				CBDAAC721AA24B1B00D3F272 /* ConstraintTests.swift */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		CBDAAC741AA24B2D00D3F272 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				CBDAAC751AA24B4300D3F272 /* NSLayoutConstraint.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,6 +278,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CBDAAC631AA218A200D3F272 /* UIViewOperators.swift in Sources */,
+				CBDAAC6A1AA2484C00D3F272 /* CGFloatConvertable.swift in Sources */,
+				CBDAAC6C1AA248A700D3F272 /* Float.swift in Sources */,
+				CBDAAC5E1AA2178100D3F272 /* LayoutConstraint.swift in Sources */,
+				CBDAAC5B1AA2168000D3F272 /* Operators.swift in Sources */,
+				CBDAAC601AA2179F00D3F272 /* PartialConstraint.swift in Sources */,
+				CBDAAC6E1AA248C700D3F272 /* Double.swift in Sources */,
+				CBDAAC701AA248D900D3F272 /* Int.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,7 +293,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBDAAC4F1AA2114200D3F272 /* DixiTests.swift in Sources */,
+				CBDAAC731AA24B1B00D3F272 /* ConstraintTests.swift in Sources */,
+				CBDAAC761AA24B4300D3F272 /* NSLayoutConstraint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +401,7 @@
 		CBDAAC531AA2114200D3F272 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -334,12 +411,14 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		CBDAAC541AA2114200D3F272 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -355,6 +434,7 @@
 		CBDAAC561AA2114200D3F272 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -366,12 +446,14 @@
 				INFOPLIST_FILE = DixiTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		CBDAAC571AA2114200D3F272 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
