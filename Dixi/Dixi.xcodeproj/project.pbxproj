@@ -1,0 +1,416 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		CBDAAC421AA2114100D3F272 /* Dixi.h in Headers */ = {isa = PBXBuildFile; fileRef = CBDAAC411AA2114100D3F272 /* Dixi.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBDAAC481AA2114100D3F272 /* Dixi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDAAC3C1AA2114100D3F272 /* Dixi.framework */; };
+		CBDAAC4F1AA2114200D3F272 /* DixiTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC4E1AA2114200D3F272 /* DixiTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		CBDAAC491AA2114100D3F272 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBDAAC331AA2114100D3F272 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CBDAAC3B1AA2114100D3F272;
+			remoteInfo = Dixi;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		CBDAAC3C1AA2114100D3F272 /* Dixi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Dixi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBDAAC401AA2114100D3F272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBDAAC411AA2114100D3F272 /* Dixi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dixi.h; sourceTree = "<group>"; };
+		CBDAAC471AA2114100D3F272 /* DixiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DixiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBDAAC4D1AA2114100D3F272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CBDAAC4E1AA2114200D3F272 /* DixiTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DixiTests.swift; sourceTree = "<group>"; };
+		CBDAAC581AA211BD00D3F272 /* Draft.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Draft.playground; path = ../Draft.playground; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		CBDAAC381AA2114100D3F272 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBDAAC441AA2114100D3F272 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBDAAC481AA2114100D3F272 /* Dixi.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		CBDAAC321AA2114100D3F272 = {
+			isa = PBXGroup;
+			children = (
+				CBDAAC581AA211BD00D3F272 /* Draft.playground */,
+				CBDAAC3E1AA2114100D3F272 /* Dixi */,
+				CBDAAC4B1AA2114100D3F272 /* DixiTests */,
+				CBDAAC3D1AA2114100D3F272 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		CBDAAC3D1AA2114100D3F272 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				CBDAAC3C1AA2114100D3F272 /* Dixi.framework */,
+				CBDAAC471AA2114100D3F272 /* DixiTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		CBDAAC3E1AA2114100D3F272 /* Dixi */ = {
+			isa = PBXGroup;
+			children = (
+				CBDAAC411AA2114100D3F272 /* Dixi.h */,
+				CBDAAC3F1AA2114100D3F272 /* Supporting Files */,
+			);
+			path = Dixi;
+			sourceTree = "<group>";
+		};
+		CBDAAC3F1AA2114100D3F272 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CBDAAC401AA2114100D3F272 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CBDAAC4B1AA2114100D3F272 /* DixiTests */ = {
+			isa = PBXGroup;
+			children = (
+				CBDAAC4E1AA2114200D3F272 /* DixiTests.swift */,
+				CBDAAC4C1AA2114100D3F272 /* Supporting Files */,
+			);
+			path = DixiTests;
+			sourceTree = "<group>";
+		};
+		CBDAAC4C1AA2114100D3F272 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				CBDAAC4D1AA2114100D3F272 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CBDAAC391AA2114100D3F272 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBDAAC421AA2114100D3F272 /* Dixi.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		CBDAAC3B1AA2114100D3F272 /* Dixi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBDAAC521AA2114200D3F272 /* Build configuration list for PBXNativeTarget "Dixi" */;
+			buildPhases = (
+				CBDAAC371AA2114100D3F272 /* Sources */,
+				CBDAAC381AA2114100D3F272 /* Frameworks */,
+				CBDAAC391AA2114100D3F272 /* Headers */,
+				CBDAAC3A1AA2114100D3F272 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Dixi;
+			productName = Dixi;
+			productReference = CBDAAC3C1AA2114100D3F272 /* Dixi.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CBDAAC461AA2114100D3F272 /* DixiTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBDAAC551AA2114200D3F272 /* Build configuration list for PBXNativeTarget "DixiTests" */;
+			buildPhases = (
+				CBDAAC431AA2114100D3F272 /* Sources */,
+				CBDAAC441AA2114100D3F272 /* Frameworks */,
+				CBDAAC451AA2114100D3F272 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CBDAAC4A1AA2114100D3F272 /* PBXTargetDependency */,
+			);
+			name = DixiTests;
+			productName = DixiTests;
+			productReference = CBDAAC471AA2114100D3F272 /* DixiTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CBDAAC331AA2114100D3F272 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Mihai Damian";
+				TargetAttributes = {
+					CBDAAC3B1AA2114100D3F272 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+					CBDAAC461AA2114100D3F272 = {
+						CreatedOnToolsVersion = 6.3;
+					};
+				};
+			};
+			buildConfigurationList = CBDAAC361AA2114100D3F272 /* Build configuration list for PBXProject "Dixi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CBDAAC321AA2114100D3F272;
+			productRefGroup = CBDAAC3D1AA2114100D3F272 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				CBDAAC3B1AA2114100D3F272 /* Dixi */,
+				CBDAAC461AA2114100D3F272 /* DixiTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CBDAAC3A1AA2114100D3F272 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBDAAC451AA2114100D3F272 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CBDAAC371AA2114100D3F272 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CBDAAC431AA2114100D3F272 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CBDAAC4F1AA2114200D3F272 /* DixiTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		CBDAAC4A1AA2114100D3F272 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CBDAAC3B1AA2114100D3F272 /* Dixi */;
+			targetProxy = CBDAAC491AA2114100D3F272 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		CBDAAC501AA2114200D3F272 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		CBDAAC511AA2114200D3F272 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CBDAAC531AA2114200D3F272 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Dixi/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		CBDAAC541AA2114200D3F272 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Dixi/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		CBDAAC561AA2114200D3F272 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DixiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		CBDAAC571AA2114200D3F272 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DixiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		CBDAAC361AA2114100D3F272 /* Build configuration list for PBXProject "Dixi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBDAAC501AA2114200D3F272 /* Debug */,
+				CBDAAC511AA2114200D3F272 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		CBDAAC521AA2114200D3F272 /* Build configuration list for PBXNativeTarget "Dixi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBDAAC531AA2114200D3F272 /* Debug */,
+				CBDAAC541AA2114200D3F272 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CBDAAC551AA2114200D3F272 /* Build configuration list for PBXNativeTarget "DixiTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBDAAC561AA2114200D3F272 /* Debug */,
+				CBDAAC571AA2114200D3F272 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CBDAAC331AA2114100D3F272 /* Project object */;
+}
