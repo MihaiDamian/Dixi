@@ -21,25 +21,43 @@ public func >= <T: CGFloatConvertable> (view: UIView, constant: T) -> LayoutCons
     return view >= constant.toCGFloat()
 }
 
-public func >= (view: UIView, constant: CGFloat) -> LayoutConstraint {
+private func sizeConstraintWithView(view: UIView, #constant: CGFloat, #relation: NSLayoutRelation) -> LayoutConstraint {
     var constraint = LayoutConstraint()
     constraint.firstItem = view
     constraint.firstItemAttribute = .Size
     constraint.constant = constant
-    constraint.relation = .GreaterThanOrEqual
+    constraint.relation = relation
     return constraint
 }
 
+public func >= (view: UIView, constant: CGFloat) -> LayoutConstraint {
+    return sizeConstraintWithView(view, constant: constant, relation: .GreaterThanOrEqual)
+}
+
+public func <= <T: CGFloatConvertable> (view: UIView, constant: T) -> LayoutConstraint {
+    return view <= constant.toCGFloat()
+}
+
 public func <= (view: UIView, constant: CGFloat) -> LayoutConstraint {
-    return LayoutConstraint()
+    return sizeConstraintWithView(view, constant: constant, relation: .LessThanOrEqual)
+}
+
+public func == <T: CGFloatConvertable> (view: UIView, constant: T) -> LayoutConstraint {
+    return view == constant.toCGFloat()
 }
 
 public func == (view: UIView, constant: CGFloat) -> LayoutConstraint {
-    return LayoutConstraint()
+    return sizeConstraintWithView(view, constant: constant, relation: .Equal)
 }
 
 public func == (leftView: UIView, rightView: UIView) -> LayoutConstraint {
-    return LayoutConstraint()
+    var constraint = LayoutConstraint()
+    constraint.firstItem = leftView
+    constraint.firstItemAttribute = .Size
+    constraint.relation = .Equal
+    constraint.secondItem = rightView
+    constraint.secondItemAttribute = .Size
+    return constraint
 }
 
 public func =| (constant: CGFloat, view: UIView) -> LayoutConstraint {

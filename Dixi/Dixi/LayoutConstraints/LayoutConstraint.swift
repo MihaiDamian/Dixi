@@ -56,6 +56,10 @@ public struct LayoutConstraint {
     
     public var autolayoutSecondItemAttribute: NSLayoutAttribute {
         switch (secondItemAttribute, axis) {
+        case (.Some(.Size), .Horizontal):
+            return .Width
+        case (.Some(.Size), .Vertical):
+            return .Height
         case (.Some(.Distance), .Horizontal):
             return .Trailing
         case (.Some(.Distance), .Vertical):

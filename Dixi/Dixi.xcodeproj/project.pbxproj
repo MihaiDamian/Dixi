@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CB01467F1AA39AA500E6811F /* NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB01467E1AA39AA500E6811F /* NSLayoutConstraint.swift */; };
 		CBDAAC421AA2114100D3F272 /* Dixi.h in Headers */ = {isa = PBXBuildFile; fileRef = CBDAAC411AA2114100D3F272 /* Dixi.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBDAAC481AA2114100D3F272 /* Dixi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDAAC3C1AA2114100D3F272 /* Dixi.framework */; };
 		CBDAAC5B1AA2168000D3F272 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC5A1AA2168000D3F272 /* Operators.swift */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		CB01467E1AA39AA500E6811F /* NSLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraint.swift; sourceTree = "<group>"; };
 		CBDAAC3C1AA2114100D3F272 /* Dixi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Dixi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBDAAC401AA2114100D3F272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBDAAC411AA2114100D3F272 /* Dixi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dixi.h; sourceTree = "<group>"; };
@@ -67,6 +69,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CB01467D1AA39A9700E6811F /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				CB01467E1AA39AA500E6811F /* NSLayoutConstraint.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
 		CBDAAC321AA2114100D3F272 = {
 			isa = PBXGroup;
 			children = (
@@ -110,6 +120,7 @@
 		CBDAAC4B1AA2114100D3F272 /* DixiTests */ = {
 			isa = PBXGroup;
 			children = (
+				CB01467D1AA39A9700E6811F /* Extension */,
 				CBDAAC711AA24B1B00D3F272 /* Tests */,
 				CBDAAC4C1AA2114100D3F272 /* Supporting Files */,
 			);
@@ -283,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBDAAC731AA24B1B00D3F272 /* ConstraintTests.swift in Sources */,
+				CB01467F1AA39AA500E6811F /* NSLayoutConstraint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

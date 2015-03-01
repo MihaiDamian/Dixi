@@ -13,72 +13,72 @@ import Dixi
 
 class ConstraintTests: XCTestCase {
     
-    private var environment: ViewTestEnvironment!
-    
-    override func setUp() {
-        environment = ViewTestEnvironment()
+    private func constraintWithVisualFormat(format: String,
+        options: NSLayoutFormatOptions = NSLayoutFormatOptions(0),
+        metrics: [String: AnyObject]?,
+        views: [String: UIView]) -> NSLayoutConstraint {
+            
+        return NSLayoutConstraint.constraintsWithVisualFormat(format, options: options, metrics: metrics, views: views).first! as! NSLayoutConstraint
     }
     
-    private struct ViewTestEnvironment {
+    func testWidthGreaterThan() {
         
-        private let superview = UIView()
-        
-        func applyConstraints(constraints: [NSLayoutConstraint]) {
-            
-            superview.addConstraints(constraints)
-            
-            for subview in superview.subviews as! [UIView] {
-                subview.setNeedsLayout()
-                subview.layoutIfNeeded()
-            }
-        }
-        
-        func makeSubview() -> UIView {
-            let subview = UIView()
-            subview.setTranslatesAutoresizingMaskIntoConstraints(false)
-            superview.addSubview(subview)
-            return subview
-        }
-    }
-
-    func testConstraintWidthGreaterThan() {
-        
-        let view1 = environment.makeSubview()
-        let view2 = environment.makeSubview()
-        
-        let width: CGFloat = 50
-        let constraints = NSLayoutConstraint.constraintsWithVisualFormat("[view(>=width)]",
-            options: NSLayoutFormatOptions(0),
+        let view = UIView()
+        let width = 50
+        let expectedConstraint = constraintWithVisualFormat("[view(>=width)]",
             metrics: ["width": 50],
-            views: ["view": view1]) as! [NSLayoutConstraint]
-        let expectedConstraint = constraints.first!
-        let dixiConstraint = (view2 >= width).autolayoutConstraint
+            views: ["view": view])
+        let dixiConstraint = (view >= width).autolayoutConstraint
         
-        environment.applyConstraints([expectedConstraint, dixiConstraint])
-        
-        XCTAssert(view1.frame == view2.frame, "Constraints should produce same result")
-        XCTAssert(view2.frame.width >= width, "Incorrect width")
+        XCTAssert(expectedConstraint == dixiConstraint, "Constraints should be identical")
     }
     
-    func testConstraintDistance() {
+    func testWidthLessThan() {
         
-        let leftView1 = environment.makeSubview()
-        let rightView1 = environment.makeSubview()
+        let view = UIView()
+        let width = 50
+        let expectedConstraint = constraintWithVisualFormat("[view(<=width)]",
+            metrics: ["width": 50],
+            views: ["view": view])
+        let dixiConstraint = (view <= width).autolayoutConstraint
         
-        let leftView2 = environment.makeSubview()
-        let rightView2 = environment.makeSubview()
+        XCTAssert(expectedConstraint == dixiConstraint, "Constraints should be identical")
+    }
+    
+    func testWidthEqualToConstant() {
         
-        let distance: CGFloat = 100
-        let constraints = NSLayoutConstraint.constraintsWithVisualFormat("[leftView]-distance-[rightView]",
-            options: NSLayoutFormatOptions(0),
+        let view = UIView()
+        let width = 50
+        let expectedConstraint = constraintWithVisualFormat("[view(==width)]",
+            metrics: ["width": 50],
+            views: ["view": view])
+        let dixiConstraint = (view == width).autolayoutConstraint
+        
+        XCTAssert(expectedConstraint == dixiConstraint, "Constraints should be identical")
+    }
+    
+    func testWidthEqualToView() {
+        
+        let view1 = UIView()
+        let view2 = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 0))
+        let expectedConstraint = constraintWithVisualFormat("[view1(==view2)]",
+            metrics: nil,
+            views: ["view1": view1, "view2": view2])
+        let dixiConstraint = (view1 == view2).autolayoutConstraint
+        
+        XCTAssert(expectedConstraint == dixiConstraint, "Constraints should be identical")
+    }
+    
+    func testDistance() {
+        
+        let leftView = UIView()
+        let rightView = UIView()
+        let distance = 100
+        let expectedConstraint = constraintWithVisualFormat("[leftView]-distance-[rightView]",
             metrics: ["distance": distance],
-            views: ["leftView": leftView1, "rightView": rightView1]) as! [NSLayoutConstraint]
-        let expectedConstraint = constraints.first!
-        let dixiConstraint = (leftView2 |- distance -| rightView2).autolayoutConstraint
+            views: ["leftView": leftView, "rightView": rightView])
+        let dixiConstraint = (leftView |- distance -| rightView).autolayoutConstraint
         
-        environment.applyConstraints([expectedConstraint, dixiConstraint])
-        
-        XCTAssert(leftView1.frame == leftView2.frame && rightView1.frame == rightView2.frame, "Constraints should produce same result")
-        XCTAssert(rightView2.frame.minX - leftView2.frame.minX == distance, "Incorrect spacing between views")
+        XCTAssert(expectedConstraint == dixiConstraint, "Constraints should be identical")
     }
 }
