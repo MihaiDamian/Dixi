@@ -9,10 +9,20 @@
 import Foundation
 
 
-struct PartialConstraint {
+public struct PartialConstraint {
+    
+    let secondItem: UIView
+    let constant: CGFloat
 }
 
 
-func -| (constraint: PartialConstraint, view: UIView) -> LayoutConstraint {
-    return LayoutConstraint()
+public func -| (partialConstraint: PartialConstraint, view: UIView) -> LayoutConstraint {
+    
+    var constraint = LayoutConstraint()
+    constraint.secondItem = partialConstraint.secondItem
+    constraint.secondItemAttribute = .Distance
+    constraint.constant = partialConstraint.constant
+    constraint.firstItem = view
+    constraint.firstItemAttribute = .Distance
+    return constraint
 }

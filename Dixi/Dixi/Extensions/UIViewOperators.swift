@@ -9,43 +9,47 @@
 import Foundation
 
 
-func |- (view: UIView, measure: CGFloat) -> PartialConstraint {
-    return PartialConstraint()
+public func |- <T: CGFloatConvertable> (view: UIView, constant: T) -> PartialConstraint {
+    return view |- constant.toCGFloat()
 }
 
-public func >= <T: CGFloatConvertable> (view: UIView, measure: T) -> LayoutConstraint {
-    return view >= measure.toCGFloat()
+public func |- (view: UIView, constant: CGFloat) -> PartialConstraint {
+    return PartialConstraint(secondItem: view, constant: constant)
 }
 
-public func >= (view: UIView, measure: CGFloat) -> LayoutConstraint {
+public func >= <T: CGFloatConvertable> (view: UIView, constant: T) -> LayoutConstraint {
+    return view >= constant.toCGFloat()
+}
+
+public func >= (view: UIView, constant: CGFloat) -> LayoutConstraint {
     var constraint = LayoutConstraint()
-    constraint.leftHandView = view
-    constraint.leftHandAttribute = .Size
-    constraint.constant = measure
+    constraint.firstItem = view
+    constraint.firstItemAttribute = .Size
+    constraint.constant = constant
     constraint.relation = .GreaterThanOrEqual
     return constraint
 }
 
-func <= (view: UIView, measure: CGFloat) -> LayoutConstraint {
+public func <= (view: UIView, constant: CGFloat) -> LayoutConstraint {
     return LayoutConstraint()
 }
 
-func == (view: UIView, measure: CGFloat) -> LayoutConstraint {
+public func == (view: UIView, constant: CGFloat) -> LayoutConstraint {
     return LayoutConstraint()
 }
 
-func == (leftView: UIView, rightView: UIView) -> LayoutConstraint {
+public func == (leftView: UIView, rightView: UIView) -> LayoutConstraint {
     return LayoutConstraint()
 }
 
-func =| (measure: CGFloat, view: UIView) -> LayoutConstraint {
+public func =| (constant: CGFloat, view: UIView) -> LayoutConstraint {
     return LayoutConstraint()
 }
 
-func |= (view: UIView, measure: CGFloat) -> LayoutConstraint {
+public func |= (view: UIView, constant: CGFloat) -> LayoutConstraint {
     return LayoutConstraint()
 }
 
-func || (leftView: UIView, rightView: UIView) -> LayoutConstraint {
+public func || (leftView: UIView, rightView: UIView) -> LayoutConstraint {
     return LayoutConstraint()
 }

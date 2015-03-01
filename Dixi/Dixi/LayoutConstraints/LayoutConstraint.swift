@@ -19,53 +19,70 @@ public struct LayoutConstraint {
     
     enum LayoutAttribute {
         case Size
+        case Distance
     }
     
     var axis = Axis.Horizontal
     
-    var leftHandView: UIView!
-    var leftHandAttribute: LayoutAttribute!
+    var firstItem: UIView!
+    var firstItemAttribute: LayoutAttribute!
     var relation = NSLayoutRelation.Equal
-    var rightHandView: UIView?
+    var secondItem: UIView?
+    var secondItemAttribute: LayoutAttribute?
     var constant: CGFloat = 0
     
     public var autolayoutConstraint: NSLayoutConstraint {
-        return NSLayoutConstraint(item: leftHandView,
-            attribute: autolayoutLeftHandAttribute,
+        return NSLayoutConstraint(item: firstItem,
+            attribute: autolayoutFirstItemAttribute,
             relatedBy: relation,
-            toItem: rightHandView,
-            attribute: .NotAnAttribute,
+            toItem: secondItem,
+            attribute: autolayoutSecondItemAttribute,
             multiplier: 1,
             constant: constant)
     }
     
-    public var autolayoutLeftHandAttribute: NSLayoutAttribute {
-        switch (leftHandAttribute!, axis) {
+    public var autolayoutFirstItemAttribute: NSLayoutAttribute {
+        switch (firstItemAttribute!, axis) {
         case (.Size, .Horizontal):
             return .Width
         case (.Size, .Vertical):
             return .Height
+        case (.Distance, .Horizontal):
+            return .Leading
+        case (.Distance, .Vertical):
+            return .Bottom
+        }
+    }
+    
+    public var autolayoutSecondItemAttribute: NSLayoutAttribute {
+        switch (secondItemAttribute, axis) {
+        case (.Some(.Distance), .Horizontal):
+            return .Trailing
+        case (.Some(.Distance), .Vertical):
+            return .Top
+        default:
+            return .NotAnAttribute
         }
     }
 }
 
 
-prefix func ^ (constraint: LayoutConstraint) -> LayoutConstraint {
+public prefix func ^ (constraint: LayoutConstraint) -> LayoutConstraint {
     return LayoutConstraint()
 }
 
-prefix func ^ (constraint: [LayoutConstraint]) -> [LayoutConstraint] {
+public prefix func ^ (constraint: [LayoutConstraint]) -> [LayoutConstraint] {
     return [LayoutConstraint()]
 }
 
-prefix func > (constraint: LayoutConstraint) -> LayoutConstraint {
+public prefix func > (constraint: LayoutConstraint) -> LayoutConstraint {
     return LayoutConstraint()
 }
 
-prefix func > (constraint: [LayoutConstraint]) -> [LayoutConstraint] {
+public prefix func > (constraint: [LayoutConstraint]) -> [LayoutConstraint] {
     return [LayoutConstraint()]
 }
 
-func ~ (constraint: LayoutConstraint, priority: Int) -> LayoutConstraint {
+public func ~ (constraint: LayoutConstraint, priority: Int) -> LayoutConstraint {
     return LayoutConstraint()
 }

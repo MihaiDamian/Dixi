@@ -18,7 +18,6 @@
 		CBDAAC6E1AA248C700D3F272 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC6D1AA248C700D3F272 /* Double.swift */; };
 		CBDAAC701AA248D900D3F272 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC6F1AA248D900D3F272 /* Int.swift */; };
 		CBDAAC731AA24B1B00D3F272 /* ConstraintTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC721AA24B1B00D3F272 /* ConstraintTests.swift */; };
-		CBDAAC761AA24B4300D3F272 /* NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC751AA24B4300D3F272 /* NSLayoutConstraint.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +46,6 @@
 		CBDAAC6D1AA248C700D3F272 /* Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		CBDAAC6F1AA248D900D3F272 /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		CBDAAC721AA24B1B00D3F272 /* ConstraintTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintTests.swift; sourceTree = "<group>"; };
-		CBDAAC751AA24B4300D3F272 /* NSLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraint.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,7 +110,6 @@
 		CBDAAC4B1AA2114100D3F272 /* DixiTests */ = {
 			isa = PBXGroup;
 			children = (
-				CBDAAC741AA24B2D00D3F272 /* Extensions */,
 				CBDAAC711AA24B1B00D3F272 /* Tests */,
 				CBDAAC4C1AA2114100D3F272 /* Supporting Files */,
 			);
@@ -161,14 +158,6 @@
 				CBDAAC721AA24B1B00D3F272 /* ConstraintTests.swift */,
 			);
 			path = Tests;
-			sourceTree = "<group>";
-		};
-		CBDAAC741AA24B2D00D3F272 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				CBDAAC751AA24B4300D3F272 /* NSLayoutConstraint.swift */,
-			);
-			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -294,7 +283,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBDAAC731AA24B1B00D3F272 /* ConstraintTests.swift in Sources */,
-				CBDAAC761AA24B4300D3F272 /* NSLayoutConstraint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -483,6 +471,7 @@
 				CBDAAC541AA2114200D3F272 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CBDAAC551AA2114200D3F272 /* Build configuration list for PBXNativeTarget "DixiTests" */ = {
 			isa = XCConfigurationList;
@@ -491,6 +480,7 @@
 				CBDAAC571AA2114200D3F272 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
