@@ -41,7 +41,7 @@ public struct LayoutConstraint {
             constant: constant)
     }
     
-    public var autolayoutFirstItemAttribute: NSLayoutAttribute {
+    private var autolayoutFirstItemAttribute: NSLayoutAttribute {
         switch (firstItemAttribute!, axis) {
         case (.Size, .Horizontal):
             return .Width
@@ -50,11 +50,11 @@ public struct LayoutConstraint {
         case (.Distance, .Horizontal):
             return .Leading
         case (.Distance, .Vertical):
-            return .Bottom
+            return .Top
         }
     }
     
-    public var autolayoutSecondItemAttribute: NSLayoutAttribute {
+    private var autolayoutSecondItemAttribute: NSLayoutAttribute {
         switch (secondItemAttribute, axis) {
         case (.Some(.Size), .Horizontal):
             return .Width
@@ -63,7 +63,7 @@ public struct LayoutConstraint {
         case (.Some(.Distance), .Horizontal):
             return .Trailing
         case (.Some(.Distance), .Vertical):
-            return .Top
+            return .Bottom
         default:
             return .NotAnAttribute
         }
@@ -72,19 +72,23 @@ public struct LayoutConstraint {
 
 
 public prefix func ^ (constraint: LayoutConstraint) -> LayoutConstraint {
-    return LayoutConstraint()
+    var constraint = constraint
+    constraint.axis = .Vertical
+    return constraint
 }
 
 public prefix func ^ (constraint: [LayoutConstraint]) -> [LayoutConstraint] {
-    return [LayoutConstraint()]
+    return constraint.map { ^$0 }
 }
 
 public prefix func > (constraint: LayoutConstraint) -> LayoutConstraint {
-    return LayoutConstraint()
+    var constraint = constraint
+    constraint.axis = .Horizontal
+    return constraint
 }
 
 public prefix func > (constraint: [LayoutConstraint]) -> [LayoutConstraint] {
-    return [LayoutConstraint()]
+    return constraint.map { >$0 }
 }
 
 public func ~ (constraint: LayoutConstraint, priority: Int) -> LayoutConstraint {
