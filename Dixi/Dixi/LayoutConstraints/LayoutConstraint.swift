@@ -30,15 +30,20 @@ public struct LayoutConstraint {
     var secondItem: UIView?
     var secondItemAttribute: LayoutAttribute?
     var constant: CGFloat = 0
+    var priority: UILayoutPriority?
     
     public var autolayoutConstraint: NSLayoutConstraint {
-        return NSLayoutConstraint(item: firstItem,
+        var constraint = NSLayoutConstraint(item: firstItem,
             attribute: autolayoutFirstItemAttribute,
             relatedBy: relation,
             toItem: secondItem,
             attribute: autolayoutSecondItemAttribute,
             multiplier: 1,
             constant: constant)
+        if let priority = priority {
+            constraint.priority = priority
+        }
+        return constraint
     }
     
     private var autolayoutFirstItemAttribute: NSLayoutAttribute {
@@ -91,6 +96,8 @@ public prefix func > (constraint: [LayoutConstraint]) -> [LayoutConstraint] {
     return constraint.map { >$0 }
 }
 
-public func ~ (constraint: LayoutConstraint, priority: Int) -> LayoutConstraint {
-    return LayoutConstraint()
+public func ~ (constraint: LayoutConstraint, priority: UILayoutPriority) -> LayoutConstraint {
+    var constraint = constraint
+    constraint.priority = priority
+    return constraint
 }

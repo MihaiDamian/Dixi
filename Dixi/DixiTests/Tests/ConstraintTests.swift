@@ -49,7 +49,7 @@ class ConstraintTests: XCTestCase {
         
         let view = UIView()
         let width = 50
-        let expectedConstraint = constraintWithVisualFormat("[view(==width)]",
+        let expectedConstraint = constraintWithVisualFormat("[view(width)]",
             metrics: ["width": width],
             views: ["view": view])
         let dixiConstraint = (view == width).autolayoutConstraint
@@ -115,6 +115,19 @@ class ConstraintTests: XCTestCase {
             metrics: ["width": width],
             views: ["view": view])
         let dixiConstraint = (>[view <= width]).first!.autolayoutConstraint
+        
+        XCTAssert(expectedConstraint == dixiConstraint, "Constraints should be identical")
+    }
+    
+    func testPriority() {
+        
+        let view = UIView()
+        let width = 100
+        let priority: UILayoutPriority = 20
+        let expectedConstraint = constraintWithVisualFormat("[view(width@priority)]",
+            metrics: ["width": width, "priority": priority],
+            views: ["view": view])
+        let dixiConstraint = (view == width ~ priority).autolayoutConstraint
         
         XCTAssert(expectedConstraint == dixiConstraint, "Constraints should be identical")
     }
