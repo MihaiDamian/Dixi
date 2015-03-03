@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		CB01467F1AA39AA500E6811F /* NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB01467E1AA39AA500E6811F /* NSLayoutConstraint.swift */; };
-		CBBA9E801AA50241000DB020 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBBA9E7F1AA50241000DB020 /* UIView.swift */; };
 		CBDAAC421AA2114100D3F272 /* Dixi.h in Headers */ = {isa = PBXBuildFile; fileRef = CBDAAC411AA2114100D3F272 /* Dixi.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBDAAC481AA2114100D3F272 /* Dixi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDAAC3C1AA2114100D3F272 /* Dixi.framework */; };
 		CBDAAC5B1AA2168000D3F272 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC5A1AA2168000D3F272 /* Operators.swift */; };
@@ -34,7 +33,6 @@
 
 /* Begin PBXFileReference section */
 		CB01467E1AA39AA500E6811F /* NSLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraint.swift; sourceTree = "<group>"; };
-		CBBA9E7F1AA50241000DB020 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		CBDAAC3C1AA2114100D3F272 /* Dixi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Dixi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBDAAC401AA2114100D3F272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBDAAC411AA2114100D3F272 /* Dixi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dixi.h; sourceTree = "<group>"; };
@@ -149,7 +147,6 @@
 		CBDAAC611AA2188C00D3F272 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				CBBA9E7F1AA50241000DB020 /* UIView.swift */,
 				CBDAAC621AA218A200D3F272 /* UIViewOperators.swift */,
 				CBDAAC6F1AA248D900D3F272 /* Int.swift */,
 				CBDAAC6B1AA248A700D3F272 /* Float.swift */,
@@ -288,7 +285,6 @@
 				CBDAAC5B1AA2168000D3F272 /* Operators.swift in Sources */,
 				CBDAAC601AA2179F00D3F272 /* PartialConstraint.swift in Sources */,
 				CBDAAC6E1AA248C700D3F272 /* Double.swift in Sources */,
-				CBBA9E801AA50241000DB020 /* UIView.swift in Sources */,
 				CBDAAC701AA248D900D3F272 /* Int.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

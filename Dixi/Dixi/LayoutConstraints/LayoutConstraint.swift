@@ -34,7 +34,7 @@ public struct LayoutConstraint {
     var constant: CGFloat = 0
     var priority: UILayoutPriority?
     
-    var autolayoutConstraint: NSLayoutConstraint {
+    public var autolayoutConstraint: NSLayoutConstraint {
         var constraint = NSLayoutConstraint(item: firstItem,
             attribute: autolayoutFirstItemAttribute,
             relatedBy: relation,
