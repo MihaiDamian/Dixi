@@ -20,9 +20,9 @@ public func -| (partialConstraint: PartialConstraint, view: UIView) -> LayoutCon
     
     var constraint = LayoutConstraint()
     constraint.secondItem = partialConstraint.secondItem
-    constraint.secondItemAttribute = .Distance
+    constraint.secondItemAttribute = .DistanceToSibling
     constraint.constant = partialConstraint.constant
     constraint.firstItem = view
-    constraint.firstItemAttribute = .Distance
+    constraint.firstItemAttribute = .DistanceToSibling
     return constraint
 }

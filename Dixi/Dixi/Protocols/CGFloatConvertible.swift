@@ -1,5 +1,5 @@
 //
-//  CGFloatConvertable.swift
+//  CGFloatConvertible.swift
 //  Dixi
 //
 //  Created by Mihai Damian on 28/02/15.
@@ -7,6 +7,6 @@
 //
 
 
-public protocol CGFloatConvertable {
+public protocol CGFloatConvertible {
     func toCGFloat() -> CGFloat
 }

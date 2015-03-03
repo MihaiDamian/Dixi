@@ -19,7 +19,9 @@ public struct LayoutConstraint {
     
     enum LayoutAttribute {
         case Size
-        case Distance
+        case DistanceToSibling
+        case LeadingOrTopToSuperview
+//        case TrailingOrToSuperview
     }
     
     var axis = Axis.Horizontal
@@ -32,7 +34,7 @@ public struct LayoutConstraint {
     var constant: CGFloat = 0
     var priority: UILayoutPriority?
     
-    public var autolayoutConstraint: NSLayoutConstraint {
+    var autolayoutConstraint: NSLayoutConstraint {
         var constraint = NSLayoutConstraint(item: firstItem,
             attribute: autolayoutFirstItemAttribute,
             relatedBy: relation,
@@ -52,9 +54,13 @@ public struct LayoutConstraint {
             return .Width
         case (.Size, .Vertical):
             return .Height
-        case (.Distance, .Horizontal):
+        case (.DistanceToSibling, .Horizontal):
             return .Leading
-        case (.Distance, .Vertical):
+        case (.DistanceToSibling, .Vertical):
+            return .Top
+        case (.LeadingOrTopToSuperview, .Horizontal):
+            return .Leading
+        case (.LeadingOrTopToSuperview, .Vertical):
             return .Top
         }
     }
@@ -65,10 +71,14 @@ public struct LayoutConstraint {
             return .Width
         case (.Some(.Size), .Vertical):
             return .Height
-        case (.Some(.Distance), .Horizontal):
+        case (.Some(.DistanceToSibling), .Horizontal):
             return .Trailing
-        case (.Some(.Distance), .Vertical):
+        case (.Some(.DistanceToSibling), .Vertical):
             return .Bottom
+        case (.Some(.LeadingOrTopToSuperview), .Horizontal):
+            return .Leading
+        case (.Some(.LeadingOrTopToSuperview), .Vertical):
+            return .Top
         default:
             return .NotAnAttribute
         }

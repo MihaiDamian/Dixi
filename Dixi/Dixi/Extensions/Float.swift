@@ -9,7 +9,7 @@
 import Foundation
 
 
-extension Float: CGFloatConvertable {
+extension Float: CGFloatConvertible {
     
     public func toCGFloat() -> CGFloat {
         return CGFloat(self)
