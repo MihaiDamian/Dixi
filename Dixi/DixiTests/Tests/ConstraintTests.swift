@@ -171,4 +171,16 @@ class ConstraintTests: XCTestCase {
         
         XCTAssert(expectedConstraint == dixiConstraint, "Constraints should be identical")
     }
+    
+    func testStandardDistance() {
+        
+        let view1 = UIView()
+        let view2 = UIView()
+        let expectedConstraint = constraintWithVisualFormat("[view1]-[view2]",
+            metrics: nil,
+            views: ["view1": view1, "view2": view2])
+        let dixiConstraint = (view1 - view2).autolayoutConstraint
+        
+        XCTAssert(expectedConstraint == dixiConstraint, "Constraints should be identical")
+    }
 }

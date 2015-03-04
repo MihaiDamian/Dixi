@@ -104,3 +104,10 @@ public func || (leftView: UIView, rightView: UIView) -> LayoutConstraint {
     constraint.secondItemAttribute = .DistanceToSibling
     return constraint
 }
+
+public func - (leftView: UIView, rightView: UIView) -> LayoutConstraint {
+    
+    var constraint = leftView || rightView
+    constraint.constant = 8
+    return constraint
+}
