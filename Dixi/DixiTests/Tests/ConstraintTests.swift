@@ -60,7 +60,7 @@ class ConstraintTests: XCTestCase {
     func testWidthEqualToView() {
         
         let view1 = UIView()
-        let view2 = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 0))
+        let view2 = UIView()
         let expectedConstraint = constraintWithVisualFormat("[view1(==view2)]",
             metrics: nil,
             views: ["view1": view1, "view2": view2])
@@ -72,7 +72,7 @@ class ConstraintTests: XCTestCase {
     func testHeightEqualToView() {
         
         let view1 = UIView()
-        let view2 = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 0))
+        let view2 = UIView()
         let expectedConstraint = constraintWithVisualFormat("V:[view1(==view2)]",
             metrics: nil,
             views: ["view1": view1, "view2": view2])
@@ -156,6 +156,18 @@ class ConstraintTests: XCTestCase {
             metrics: ["distance": distance],
             views: ["view": view])
         let dixiConstraint = (^(view |-| distance)).autolayoutConstraint
+        
+        XCTAssert(expectedConstraint == dixiConstraint, "Constraints should be identical")
+    }
+    
+    func testFlushViews() {
+        
+        let view1 = UIView()
+        let view2 = UIView()
+        let expectedConstraint = constraintWithVisualFormat("[view1][view2]",
+            metrics: nil,
+            views: ["view1": view1, "view2": view2])
+        let dixiConstraint = (view1 || view2).autolayoutConstraint
         
         XCTAssert(expectedConstraint == dixiConstraint, "Constraints should be identical")
     }

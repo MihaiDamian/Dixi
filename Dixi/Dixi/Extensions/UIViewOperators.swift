@@ -95,5 +95,12 @@ public func |-| (view: UIView, constant: CGFloat) -> LayoutConstraint {
 }
 
 public func || (leftView: UIView, rightView: UIView) -> LayoutConstraint {
-    return LayoutConstraint()
+    
+    var constraint = LayoutConstraint()
+    constraint.firstItem = rightView
+    constraint.firstItemAttribute = .DistanceToSibling
+    constraint.relation = .Equal
+    constraint.secondItem = leftView
+    constraint.secondItemAttribute = .DistanceToSibling
+    return constraint
 }
