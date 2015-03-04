@@ -10,7 +10,7 @@ import Foundation
 import UIKit
 
 
-func == (leftConstraint: NSLayoutConstraint, rightConstraint: NSLayoutConstraint) -> Bool {
+public func == (leftConstraint: NSLayoutConstraint, rightConstraint: NSLayoutConstraint) -> Bool {
     
     let equalPriority = leftConstraint.priority == rightConstraint.priority
     let equalFirstItem = leftConstraint.firstItem === rightConstraint.firstItem
@@ -23,3 +23,6 @@ func == (leftConstraint: NSLayoutConstraint, rightConstraint: NSLayoutConstraint
     
     return equalPriority && equalFirstItem && equalFirstAttribute && equalRelation && equalSecondItem && equalSecondAttribute && equalMultiplier && equalConstant
 }
+
+
+extension NSLayoutConstraint: Equatable {}
