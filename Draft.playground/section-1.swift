@@ -61,14 +61,13 @@ prefix func > (constraint: [LayoutConstraint]) -> [LayoutConstraint] {
 }
 
 // Distance from superview operator
-infix operator =| {}
-func =| (measure: CGFloat, view: UIView) -> LayoutConstraint {
+infix operator |-| {}
+func |-| (measure: CGFloat, view: UIView) -> LayoutConstraint {
     return LayoutConstraint()
 }
 
 // Distance to superview operator
-infix operator |= {}
-func |= (view: UIView, measure: CGFloat) -> LayoutConstraint {
+func |-| (view: UIView, measure: CGFloat) -> LayoutConstraint {
     return LayoutConstraint()
 }
 
@@ -92,8 +91,8 @@ let con1 = view1 |- 50 -| view2
 let con2 = view1 >= 10
 let con3 = ^(view1 |- 50 -| view2)
 let con4 = >(view1 |- 50 -| view2)
-let con5 = 50 =| view1
-let con6 = view1 |= 50
+let con5 = 50 |-| view1
+let con6 = view1 |-| 50
 let con7 = view1 || view2
 let con8 = view1 <= 10
 let con9 = view1 == 50

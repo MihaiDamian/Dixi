@@ -141,7 +141,21 @@ class ConstraintTests: XCTestCase {
         let expectedConstraint = constraintWithVisualFormat("|-distance-[view]",
             metrics: ["distance": distance],
             views: ["view": view])
-        let dixiConstraint = (distance =| view).autolayoutConstraint
+        let dixiConstraint = (distance |-| view).autolayoutConstraint
+        
+        XCTAssert(expectedConstraint == dixiConstraint, "Constraints should be identical")
+    }
+    
+    func testBottomDistanceToSuperview() {
+        
+        let parent = UIView()
+        let view = UIView()
+        parent.addSubview(view)
+        let distance = 50
+        let expectedConstraint = constraintWithVisualFormat("V:[view]-distance-|",
+            metrics: ["distance": distance],
+            views: ["view": view])
+        let dixiConstraint = (^(view |-| distance)).autolayoutConstraint
         
         XCTAssert(expectedConstraint == dixiConstraint, "Constraints should be identical")
     }

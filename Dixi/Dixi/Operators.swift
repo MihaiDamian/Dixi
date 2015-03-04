@@ -11,6 +11,5 @@ infix operator |- { associativity left }
 infix operator -| { associativity left}
 prefix operator ^ {}
 prefix operator > {}
-infix operator =| {}
-infix operator |= {}
+infix operator |-| {}
 infix operator ~ {}

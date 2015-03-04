@@ -21,7 +21,7 @@ public struct LayoutConstraint {
         case Size
         case DistanceToSibling
         case LeadingOrTopToSuperview
-//        case TrailingOrToSuperview
+        case TrailingOrBottomToSuperview
     }
     
     var axis = Axis.Horizontal
@@ -62,6 +62,10 @@ public struct LayoutConstraint {
             return .Leading
         case (.LeadingOrTopToSuperview, .Vertical):
             return .Top
+        case (.TrailingOrBottomToSuperview, .Horizontal):
+            return .Trailing
+        case (.TrailingOrBottomToSuperview, .Vertical):
+            return .Bottom
         }
     }
     
@@ -79,6 +83,10 @@ public struct LayoutConstraint {
             return .Leading
         case (.Some(.LeadingOrTopToSuperview), .Vertical):
             return .Top
+        case (.Some(.TrailingOrBottomToSuperview), .Horizontal):
+            return .Trailing
+        case (.Some(.TrailingOrBottomToSuperview), .Vertical):
+            return .Bottom
         default:
             return .NotAnAttribute
         }

@@ -60,24 +60,38 @@ public func == (leftView: UIView, rightView: UIView) -> LayoutConstraint {
     return constraint
 }
 
-public func =| <T: CGFloatConvertible> (constant: T, view: UIView) -> LayoutConstraint {
-    return constant.toCGFloat() =| view
+public func |-| <T: CGFloatConvertible> (constant: T, view: UIView) -> LayoutConstraint {
+    return constant.toCGFloat() |-| view
 }
 
-public func =| (constant: CGFloat, view: UIView) -> LayoutConstraint {
+public func |-| (constant: CGFloat, view: UIView) -> LayoutConstraint {
+    assert(view.superview != nil, "Can't use `distance to superview` operator on view that has no superview")
+    
     var constraint = LayoutConstraint()
     constraint.firstItem = view
     constraint.firstItemAttribute = .LeadingOrTopToSuperview
     constraint.relation = .Equal
-    assert(view.superview != nil, "Can't use `distance from superview` operator on view that has no superview")
     constraint.secondItem = view.superview!
     constraint.secondItemAttribute = .LeadingOrTopToSuperview
     constraint.constant = constant
     return constraint
 }
 
-public func |= (view: UIView, constant: CGFloat) -> LayoutConstraint {
-    return LayoutConstraint()
+public func |-| <T: CGFloatConvertible> (view: UIView, constant: T) -> LayoutConstraint {
+    return view |-| constant.toCGFloat()
+}
+
+public func |-| (view: UIView, constant: CGFloat) -> LayoutConstraint {
+    assert(view.superview != nil, "Can't use `distance to superview` operator on view that has no superview")
+    
+    var constraint = LayoutConstraint()
+    constraint.firstItem = view.superview!
+    constraint.firstItemAttribute = .TrailingOrBottomToSuperview
+    constraint.relation = .Equal
+    constraint.secondItem = view
+    constraint.secondItemAttribute = .TrailingOrBottomToSuperview
+    constraint.constant = constant
+    return constraint
 }
 
 public func || (leftView: UIView, rightView: UIView) -> LayoutConstraint {
