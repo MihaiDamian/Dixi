@@ -42,7 +42,6 @@
 		CBDAAC411AA2114100D3F272 /* Dixi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dixi.h; sourceTree = "<group>"; };
 		CBDAAC471AA2114100D3F272 /* DixiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DixiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBDAAC4D1AA2114100D3F272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CBDAAC581AA211BD00D3F272 /* Draft.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = Draft.playground; path = ../Draft.playground; sourceTree = "<group>"; };
 		CBDAAC5A1AA2168000D3F272 /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		CBDAAC5D1AA2178100D3F272 /* LayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutConstraint.swift; sourceTree = "<group>"; };
 		CBDAAC5F1AA2179F00D3F272 /* PartialConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartialConstraint.swift; sourceTree = "<group>"; };
@@ -84,7 +83,6 @@
 		CBDAAC321AA2114100D3F272 = {
 			isa = PBXGroup;
 			children = (
-				CBDAAC581AA211BD00D3F272 /* Draft.playground */,
 				CBDAAC3E1AA2114100D3F272 /* Dixi */,
 				CBDAAC4B1AA2114100D3F272 /* DixiTests */,
 				CBDAAC3D1AA2114100D3F272 /* Products */,
