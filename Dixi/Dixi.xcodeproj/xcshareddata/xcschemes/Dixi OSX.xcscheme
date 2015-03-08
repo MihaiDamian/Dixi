@@ -14,23 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CBDAAC3B1AA2114100D3F272"
+               BlueprintIdentifier = "CB3482451AACDA140002CD37"
                BuildableName = "Dixi.framework"
-               BlueprintName = "Dixi"
-               ReferencedContainer = "container:Dixi.xcodeproj">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "NO"
-            buildForArchiving = "NO"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CBDAAC461AA2114100D3F272"
-               BuildableName = "DixiTests.xctest"
-               BlueprintName = "DixiTests"
+               BlueprintName = "Dixi OSX"
                ReferencedContainer = "container:Dixi.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -46,9 +32,9 @@
             skipped = "NO">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "CBDAAC461AA2114100D3F272"
-               BuildableName = "DixiTests.xctest"
-               BlueprintName = "DixiTests"
+               BlueprintIdentifier = "CBFB12911AACE23F00CB092B"
+               BuildableName = "Dixi OSX Tests.xctest"
+               BlueprintName = "Dixi OSX Tests"
                ReferencedContainer = "container:Dixi.xcodeproj">
             </BuildableReference>
          </TestableReference>
@@ -56,9 +42,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CBDAAC3B1AA2114100D3F272"
+            BlueprintIdentifier = "CB3482451AACDA140002CD37"
             BuildableName = "Dixi.framework"
-            BlueprintName = "Dixi"
+            BlueprintName = "Dixi OSX"
             ReferencedContainer = "container:Dixi.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -75,9 +61,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CBDAAC3B1AA2114100D3F272"
+            BlueprintIdentifier = "CB3482451AACDA140002CD37"
             BuildableName = "Dixi.framework"
-            BlueprintName = "Dixi"
+            BlueprintName = "Dixi OSX"
             ReferencedContainer = "container:Dixi.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -93,9 +79,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "CBDAAC3B1AA2114100D3F272"
+            BlueprintIdentifier = "CB3482451AACDA140002CD37"
             BuildableName = "Dixi.framework"
-            BlueprintName = "Dixi"
+            BlueprintName = "Dixi OSX"
             ReferencedContainer = "container:Dixi.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

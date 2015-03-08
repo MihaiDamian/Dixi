@@ -7,21 +7,26 @@
 //
 
 import Foundation
+#if os(iOS)
+    import UIKit
+#else
+    import AppKit
+#endif
 
 
-public func |- <T: CGFloatConvertible> (view: UIView, constant: T) -> PartialConstraint {
+public func |- <T: CGFloatConvertible> (view: View, constant: T) -> PartialConstraint {
     return view |- constant.toCGFloat()
 }
 
-public func |- (view: UIView, constant: CGFloat) -> PartialConstraint {
+public func |- (view: View, constant: CGFloat) -> PartialConstraint {
     return PartialConstraint(secondItem: view, constant: constant)
 }
 
-public func >= <T: CGFloatConvertible> (view: UIView, constant: T) -> LayoutConstraint {
+public func >= <T: CGFloatConvertible> (view: View, constant: T) -> LayoutConstraint {
     return view >= constant.toCGFloat()
 }
 
-private func sizeConstraintWithView(view: UIView, #constant: CGFloat, #relation: NSLayoutRelation) -> LayoutConstraint {
+private func sizeConstraintWithView(view: View, #constant: CGFloat, #relation: NSLayoutRelation) -> LayoutConstraint {
     var constraint = LayoutConstraint()
     constraint.firstItem = view
     constraint.firstItemAttribute = .Size
@@ -30,27 +35,27 @@ private func sizeConstraintWithView(view: UIView, #constant: CGFloat, #relation:
     return constraint
 }
 
-public func >= (view: UIView, constant: CGFloat) -> LayoutConstraint {
+public func >= (view: View, constant: CGFloat) -> LayoutConstraint {
     return sizeConstraintWithView(view, constant: constant, relation: .GreaterThanOrEqual)
 }
 
-public func <= <T: CGFloatConvertible> (view: UIView, constant: T) -> LayoutConstraint {
+public func <= <T: CGFloatConvertible> (view: View, constant: T) -> LayoutConstraint {
     return view <= constant.toCGFloat()
 }
 
-public func <= (view: UIView, constant: CGFloat) -> LayoutConstraint {
+public func <= (view: View, constant: CGFloat) -> LayoutConstraint {
     return sizeConstraintWithView(view, constant: constant, relation: .LessThanOrEqual)
 }
 
-public func == <T: CGFloatConvertible> (view: UIView, constant: T) -> LayoutConstraint {
+public func == <T: CGFloatConvertible> (view: View, constant: T) -> LayoutConstraint {
     return view == constant.toCGFloat()
 }
 
-public func == (view: UIView, constant: CGFloat) -> LayoutConstraint {
+public func == (view: View, constant: CGFloat) -> LayoutConstraint {
     return sizeConstraintWithView(view, constant: constant, relation: .Equal)
 }
 
-public func == (leftView: UIView, rightView: UIView) -> LayoutConstraint {
+public func == (leftView: View, rightView: View) -> LayoutConstraint {
     var constraint = LayoutConstraint()
     constraint.firstItem = leftView
     constraint.firstItemAttribute = .Size
@@ -60,11 +65,11 @@ public func == (leftView: UIView, rightView: UIView) -> LayoutConstraint {
     return constraint
 }
 
-public func |-| <T: CGFloatConvertible> (constant: T, view: UIView) -> LayoutConstraint {
+public func |-| <T: CGFloatConvertible> (constant: T, view: View) -> LayoutConstraint {
     return constant.toCGFloat() |-| view
 }
 
-public func |-| (constant: CGFloat, view: UIView) -> LayoutConstraint {
+public func |-| (constant: CGFloat, view: View) -> LayoutConstraint {
     assert(view.superview != nil, "Can't use `distance to superview` operator on view that has no superview")
     
     var constraint = LayoutConstraint()
@@ -77,11 +82,11 @@ public func |-| (constant: CGFloat, view: UIView) -> LayoutConstraint {
     return constraint
 }
 
-public func |-| <T: CGFloatConvertible> (view: UIView, constant: T) -> LayoutConstraint {
+public func |-| <T: CGFloatConvertible> (view: View, constant: T) -> LayoutConstraint {
     return view |-| constant.toCGFloat()
 }
 
-public func |-| (view: UIView, constant: CGFloat) -> LayoutConstraint {
+public func |-| (view: View, constant: CGFloat) -> LayoutConstraint {
     assert(view.superview != nil, "Can't use `distance to superview` operator on view that has no superview")
     
     var constraint = LayoutConstraint()
@@ -94,7 +99,7 @@ public func |-| (view: UIView, constant: CGFloat) -> LayoutConstraint {
     return constraint
 }
 
-public func || (leftView: UIView, rightView: UIView) -> LayoutConstraint {
+public func || (leftView: View, rightView: View) -> LayoutConstraint {
     
     var constraint = LayoutConstraint()
     constraint.firstItem = rightView
@@ -105,7 +110,7 @@ public func || (leftView: UIView, rightView: UIView) -> LayoutConstraint {
     return constraint
 }
 
-public func - (leftView: UIView, rightView: UIView) -> LayoutConstraint {
+public func - (leftView: View, rightView: View) -> LayoutConstraint {
     
     var constraint = leftView || rightView
     constraint.constant = 8

@@ -9,13 +9,19 @@
 import XCTest
 import Dixi
 
+#if os(iOS)
+    import UIKit
+#else
+    import AppKit
+#endif
+
 
 class UIViewExtensionTests: XCTestCase {
 
     func testAddConstraints() {
         
-        let rootView = UIView()
-        let childView = UIView()
+        let rootView = View()
+        let childView = View()
         rootView.addSubview(childView)
         let leftDistance = 50
         let rightDistance = 60
@@ -28,7 +34,11 @@ class UIViewExtensionTests: XCTestCase {
         
         rootView.addConstraints(^[leftDistance |-| childView, childView |-| rightDistance, childView >= height])
         
+#if os(iOS)
         let addedConstraints = rootView.constraints() as! [NSLayoutConstraint]
+#else
+        let addedConstraints = rootView.constraints as! [NSLayoutConstraint]
+#endif
         // We can't simply compare the array for equality since the order of expected constraints is not clearly defined.
         for constraint in expectedConstraints {
             XCTAssert(contains(addedConstraints, constraint), "Expected constraint was not added by Dixi")

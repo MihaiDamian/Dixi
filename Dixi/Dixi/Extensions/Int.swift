@@ -7,6 +7,11 @@
 //
 
 import Foundation
+#if os(iOS)
+    import UIKit
+#else
+    import AppKit
+#endif
 
 
 extension Int: CGFloatConvertible {

@@ -7,9 +7,14 @@
 //
 
 import Foundation
+#if os(iOS)
+    import UIKit
+#else
+    import AppKit
+#endif
 
 
-extension UIView {
+extension View {
     
     public func addConstraint(constraint: LayoutConstraint) {
         addConstraint(constraint.autolayoutConstraint)

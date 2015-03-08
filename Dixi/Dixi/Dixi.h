@@ -6,7 +6,8 @@
 //  Copyright (c) 2015 Mihai Damian. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+
 
 //! Project version number for Dixi.
 FOUNDATION_EXPORT double DixiVersionNumber;

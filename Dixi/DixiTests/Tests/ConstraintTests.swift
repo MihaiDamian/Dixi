@@ -6,7 +6,11 @@
 //  Copyright (c) 2015 Mihai Damian. All rights reserved.
 //
 
-import UIKit
+#if os(iOS)
+    import UIKit
+#else
+    import AppKit
+#endif
 import XCTest
 import Dixi
 
@@ -16,14 +20,14 @@ class ConstraintTests: XCTestCase {
     private func constraintWithVisualFormat(format: String,
         options: NSLayoutFormatOptions = NSLayoutFormatOptions(0),
         metrics: [String: AnyObject]?,
-        views: [String: UIView]) -> NSLayoutConstraint {
+        views: [String: View]) -> NSLayoutConstraint {
             
         return NSLayoutConstraint.constraintsWithVisualFormat(format, options: options, metrics: metrics, views: views).first! as! NSLayoutConstraint
     }
     
     func testWidthGreaterThan() {
         
-        let view = UIView()
+        let view = View()
         let width = 50
         let expectedConstraint = constraintWithVisualFormat("[view(>=width)]",
             metrics: ["width": width],
@@ -35,7 +39,7 @@ class ConstraintTests: XCTestCase {
     
     func testWidthLessThan() {
         
-        let view = UIView()
+        let view = View()
         let width = 50
         let expectedConstraint = constraintWithVisualFormat("[view(<=width)]",
             metrics: ["width": width],
@@ -47,7 +51,7 @@ class ConstraintTests: XCTestCase {
     
     func testWidthEqualToConstant() {
         
-        let view = UIView()
+        let view = View()
         let width = 50
         let expectedConstraint = constraintWithVisualFormat("[view(width)]",
             metrics: ["width": width],
@@ -59,8 +63,8 @@ class ConstraintTests: XCTestCase {
     
     func testWidthEqualToView() {
         
-        let view1 = UIView()
-        let view2 = UIView()
+        let view1 = View()
+        let view2 = View()
         let expectedConstraint = constraintWithVisualFormat("[view1(==view2)]",
             metrics: nil,
             views: ["view1": view1, "view2": view2])
@@ -71,8 +75,8 @@ class ConstraintTests: XCTestCase {
     
     func testHeightEqualToView() {
         
-        let view1 = UIView()
-        let view2 = UIView()
+        let view1 = View()
+        let view2 = View()
         let expectedConstraint = constraintWithVisualFormat("V:[view1(==view2)]",
             metrics: nil,
             views: ["view1": view1, "view2": view2])
@@ -83,8 +87,8 @@ class ConstraintTests: XCTestCase {
     
     func testDistance() {
         
-        let leftView = UIView()
-        let rightView = UIView()
+        let leftView = View()
+        let rightView = View()
         let distance = 100
         let expectedConstraint = constraintWithVisualFormat("[leftView]-distance-[rightView]",
             metrics: ["distance": distance],
@@ -96,8 +100,8 @@ class ConstraintTests: XCTestCase {
     
     func testVerticalDistance() {
         
-        let leftView = UIView()
-        let rightView = UIView()
+        let leftView = View()
+        let rightView = View()
         let distance = 75
         let expectedConstraint = constraintWithVisualFormat("V:[leftView]-distance-[rightView]",
             metrics: ["distance": distance],
@@ -109,7 +113,7 @@ class ConstraintTests: XCTestCase {
     
     func testHorizontalAxis() {
         
-        let view = UIView()
+        let view = View()
         let width = 70
         let expectedConstraint = constraintWithVisualFormat("H:[view(<=width)]",
             metrics: ["width": width],
@@ -121,9 +125,9 @@ class ConstraintTests: XCTestCase {
     
     func testPriority() {
         
-        let view = UIView()
+        let view = View()
         let width = 100
-        let priority: UILayoutPriority = 20
+        let priority: LayoutPriority = 20
         let expectedConstraint = constraintWithVisualFormat("[view(width@priority)]",
             metrics: ["width": width, "priority": priority],
             views: ["view": view])
@@ -134,8 +138,8 @@ class ConstraintTests: XCTestCase {
     
     func testLeadingDistanceToSuperview() {
         
-        let parent = UIView()
-        let view = UIView()
+        let parent = View()
+        let view = View()
         parent.addSubview(view)
         let distance = 50
         let expectedConstraint = constraintWithVisualFormat("|-distance-[view]",
@@ -148,8 +152,8 @@ class ConstraintTests: XCTestCase {
     
     func testBottomDistanceToSuperview() {
         
-        let parent = UIView()
-        let view = UIView()
+        let parent = View()
+        let view = View()
         parent.addSubview(view)
         let distance = 50
         let expectedConstraint = constraintWithVisualFormat("V:[view]-distance-|",
@@ -162,8 +166,8 @@ class ConstraintTests: XCTestCase {
     
     func testFlushViews() {
         
-        let view1 = UIView()
-        let view2 = UIView()
+        let view1 = View()
+        let view2 = View()
         let expectedConstraint = constraintWithVisualFormat("[view1][view2]",
             metrics: nil,
             views: ["view1": view1, "view2": view2])
@@ -174,8 +178,8 @@ class ConstraintTests: XCTestCase {
     
     func testStandardDistance() {
         
-        let view1 = UIView()
-        let view2 = UIView()
+        let view1 = View()
+        let view2 = View()
         let expectedConstraint = constraintWithVisualFormat("[view1]-[view2]",
             metrics: nil,
             views: ["view1": view1, "view2": view2])

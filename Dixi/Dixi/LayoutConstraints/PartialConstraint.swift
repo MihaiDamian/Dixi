@@ -7,16 +7,21 @@
 //
 
 import Foundation
+#if os(iOS)
+    import UIKit
+#else
+    import AppKit
+#endif
 
 
 public struct PartialConstraint {
     
-    let secondItem: UIView
+    let secondItem: View
     let constant: CGFloat
 }
 
 
-public func -| (partialConstraint: PartialConstraint, view: UIView) -> LayoutConstraint {
+public func -| (partialConstraint: PartialConstraint, view: View) -> LayoutConstraint {
     
     var constraint = LayoutConstraint()
     constraint.secondItem = partialConstraint.secondItem

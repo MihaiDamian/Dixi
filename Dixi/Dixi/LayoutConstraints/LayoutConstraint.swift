@@ -7,7 +7,11 @@
 //
 
 import Foundation
-import UIKit
+#if os(iOS)
+    import UIKit
+#else
+    import AppKit
+#endif
 
 
 public struct LayoutConstraint {
@@ -26,13 +30,13 @@ public struct LayoutConstraint {
     
     var axis = Axis.Horizontal
     
-    var firstItem: UIView!
+    var firstItem: View!
     var firstItemAttribute: LayoutAttribute!
     var relation = NSLayoutRelation.Equal
-    var secondItem: UIView?
+    var secondItem: View?
     var secondItemAttribute: LayoutAttribute?
     var constant: CGFloat = 0
-    var priority: UILayoutPriority?
+    var priority: LayoutPriority?
     
     public var autolayoutConstraint: NSLayoutConstraint {
         var constraint = NSLayoutConstraint(item: firstItem,
@@ -114,7 +118,7 @@ public prefix func > (constraint: [LayoutConstraint]) -> [LayoutConstraint] {
     return constraint.map { >$0 }
 }
 
-public func ~ (constraint: LayoutConstraint, priority: UILayoutPriority) -> LayoutConstraint {
+public func ~ (constraint: LayoutConstraint, priority: LayoutPriority) -> LayoutConstraint {
     var constraint = constraint
     constraint.priority = priority
     return constraint

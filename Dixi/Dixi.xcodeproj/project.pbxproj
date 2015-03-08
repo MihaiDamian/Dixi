@@ -8,22 +8,45 @@
 
 /* Begin PBXBuildFile section */
 		CB01467F1AA39AA500E6811F /* NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB01467E1AA39AA500E6811F /* NSLayoutConstraint.swift */; };
-		CBC74C281AA799C700270D65 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC74C271AA799C700270D65 /* UIView.swift */; };
-		CBC74C2C1AA7A0F000270D65 /* UIViewExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC74C2B1AA7A0F000270D65 /* UIViewExtensionTests.swift */; };
+		CB177EFF1AACEB56003BADE0 /* Dixi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CB3482571AACDA140002CD37 /* Dixi.framework */; };
+		CB177F051AACEB7D003BADE0 /* ViewExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC74C2B1AA7A0F000270D65 /* ViewExtensionTests.swift */; };
+		CB177F061AACEB80003BADE0 /* ConstraintTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC721AA24B1B00D3F272 /* ConstraintTests.swift */; };
+		CB177F071AACEB84003BADE0 /* NSLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB01467E1AA39AA500E6811F /* NSLayoutConstraint.swift */; };
+		CB3482471AACDA140002CD37 /* ViewOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC621AA218A200D3F272 /* ViewOperators.swift */; };
+		CB3482481AACDA140002CD37 /* CGFloatConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC691AA2484C00D3F272 /* CGFloatConvertible.swift */; };
+		CB3482491AACDA140002CD37 /* Float.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC6B1AA248A700D3F272 /* Float.swift */; };
+		CB34824A1AACDA140002CD37 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC5D1AA2178100D3F272 /* LayoutConstraint.swift */; };
+		CB34824B1AACDA140002CD37 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC5A1AA2168000D3F272 /* Operators.swift */; };
+		CB34824C1AACDA140002CD37 /* PartialConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC5F1AA2179F00D3F272 /* PartialConstraint.swift */; };
+		CB34824D1AACDA140002CD37 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC6D1AA248C700D3F272 /* Double.swift */; };
+		CB34824E1AACDA140002CD37 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC74C271AA799C700270D65 /* View.swift */; };
+		CB34824F1AACDA140002CD37 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC6F1AA248D900D3F272 /* Int.swift */; };
+		CB3482521AACDA140002CD37 /* Dixi.h in Headers */ = {isa = PBXBuildFile; fileRef = CBDAAC411AA2114100D3F272 /* Dixi.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CBC74C281AA799C700270D65 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC74C271AA799C700270D65 /* View.swift */; };
+		CBC74C2C1AA7A0F000270D65 /* ViewExtensionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBC74C2B1AA7A0F000270D65 /* ViewExtensionTests.swift */; };
 		CBDAAC421AA2114100D3F272 /* Dixi.h in Headers */ = {isa = PBXBuildFile; fileRef = CBDAAC411AA2114100D3F272 /* Dixi.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		CBDAAC481AA2114100D3F272 /* Dixi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBDAAC3C1AA2114100D3F272 /* Dixi.framework */; };
 		CBDAAC5B1AA2168000D3F272 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC5A1AA2168000D3F272 /* Operators.swift */; };
 		CBDAAC5E1AA2178100D3F272 /* LayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC5D1AA2178100D3F272 /* LayoutConstraint.swift */; };
 		CBDAAC601AA2179F00D3F272 /* PartialConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC5F1AA2179F00D3F272 /* PartialConstraint.swift */; };
-		CBDAAC631AA218A200D3F272 /* UIViewOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC621AA218A200D3F272 /* UIViewOperators.swift */; };
+		CBDAAC631AA218A200D3F272 /* ViewOperators.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC621AA218A200D3F272 /* ViewOperators.swift */; };
 		CBDAAC6A1AA2484C00D3F272 /* CGFloatConvertible.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC691AA2484C00D3F272 /* CGFloatConvertible.swift */; };
 		CBDAAC6C1AA248A700D3F272 /* Float.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC6B1AA248A700D3F272 /* Float.swift */; };
 		CBDAAC6E1AA248C700D3F272 /* Double.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC6D1AA248C700D3F272 /* Double.swift */; };
 		CBDAAC701AA248D900D3F272 /* Int.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC6F1AA248D900D3F272 /* Int.swift */; };
 		CBDAAC731AA24B1B00D3F272 /* ConstraintTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBDAAC721AA24B1B00D3F272 /* ConstraintTests.swift */; };
+		CBFB128E1AACE1B700CB092B /* UIKit-AppKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFB128D1AACE1B700CB092B /* UIKit-AppKit.swift */; };
+		CBFB128F1AACE1B700CB092B /* UIKit-AppKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBFB128D1AACE1B700CB092B /* UIKit-AppKit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		CB177F001AACEB56003BADE0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CBDAAC331AA2114100D3F272 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CB3482451AACDA140002CD37;
+			remoteInfo = "Dixi OSX";
+		};
 		CBDAAC491AA2114100D3F272 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CBDAAC331AA2114100D3F272 /* Project object */;
@@ -35,25 +58,43 @@
 
 /* Begin PBXFileReference section */
 		CB01467E1AA39AA500E6811F /* NSLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraint.swift; sourceTree = "<group>"; };
-		CBC74C271AA799C700270D65 /* UIView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
-		CBC74C2B1AA7A0F000270D65 /* UIViewExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensionTests.swift; sourceTree = "<group>"; };
+		CB177EF91AACEB56003BADE0 /* Dixi OSX Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dixi OSX Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB3482571AACDA140002CD37 /* Dixi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Dixi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBC74C271AA799C700270D65 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		CBC74C2B1AA7A0F000270D65 /* ViewExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtensionTests.swift; sourceTree = "<group>"; };
 		CBDAAC3C1AA2114100D3F272 /* Dixi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Dixi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBDAAC401AA2114100D3F272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBDAAC411AA2114100D3F272 /* Dixi.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Dixi.h; sourceTree = "<group>"; };
-		CBDAAC471AA2114100D3F272 /* DixiTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DixiTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBDAAC471AA2114100D3F272 /* Dixi iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dixi iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBDAAC4D1AA2114100D3F272 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CBDAAC5A1AA2168000D3F272 /* Operators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		CBDAAC5D1AA2178100D3F272 /* LayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LayoutConstraint.swift; sourceTree = "<group>"; };
 		CBDAAC5F1AA2179F00D3F272 /* PartialConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PartialConstraint.swift; sourceTree = "<group>"; };
-		CBDAAC621AA218A200D3F272 /* UIViewOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewOperators.swift; sourceTree = "<group>"; };
+		CBDAAC621AA218A200D3F272 /* ViewOperators.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewOperators.swift; sourceTree = "<group>"; };
 		CBDAAC691AA2484C00D3F272 /* CGFloatConvertible.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGFloatConvertible.swift; sourceTree = "<group>"; };
 		CBDAAC6B1AA248A700D3F272 /* Float.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Float.swift; sourceTree = "<group>"; };
 		CBDAAC6D1AA248C700D3F272 /* Double.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Double.swift; sourceTree = "<group>"; };
 		CBDAAC6F1AA248D900D3F272 /* Int.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Int.swift; sourceTree = "<group>"; };
 		CBDAAC721AA24B1B00D3F272 /* ConstraintTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConstraintTests.swift; sourceTree = "<group>"; };
+		CBFB128D1AACE1B700CB092B /* UIKit-AppKit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIKit-AppKit.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CB177EF61AACEB56003BADE0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB177EFF1AACEB56003BADE0 /* Dixi.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB3482501AACDA140002CD37 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CBDAAC381AA2114100D3F272 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -93,7 +134,9 @@
 			isa = PBXGroup;
 			children = (
 				CBDAAC3C1AA2114100D3F272 /* Dixi.framework */,
-				CBDAAC471AA2114100D3F272 /* DixiTests.xctest */,
+				CBDAAC471AA2114100D3F272 /* Dixi iOS Tests.xctest */,
+				CB3482571AACDA140002CD37 /* Dixi.framework */,
+				CB177EF91AACEB56003BADE0 /* Dixi OSX Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -104,6 +147,7 @@
 				CBDAAC411AA2114100D3F272 /* Dixi.h */,
 				CBDAAC5A1AA2168000D3F272 /* Operators.swift */,
 				CBDAAC611AA2188C00D3F272 /* Extensions */,
+				CBFB128C1AACE19900CB092B /* Shims */,
 				CBDAAC5C1AA2176000D3F272 /* LayoutConstraints */,
 				CBDAAC681AA2481100D3F272 /* Protocols */,
 				CBDAAC3F1AA2114100D3F272 /* Supporting Files */,
@@ -149,8 +193,8 @@
 		CBDAAC611AA2188C00D3F272 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
-				CBC74C271AA799C700270D65 /* UIView.swift */,
-				CBDAAC621AA218A200D3F272 /* UIViewOperators.swift */,
+				CBC74C271AA799C700270D65 /* View.swift */,
+				CBDAAC621AA218A200D3F272 /* ViewOperators.swift */,
 				CBDAAC6F1AA248D900D3F272 /* Int.swift */,
 				CBDAAC6B1AA248A700D3F272 /* Float.swift */,
 				CBDAAC6D1AA248C700D3F272 /* Double.swift */,
@@ -170,14 +214,30 @@
 			isa = PBXGroup;
 			children = (
 				CBDAAC721AA24B1B00D3F272 /* ConstraintTests.swift */,
-				CBC74C2B1AA7A0F000270D65 /* UIViewExtensionTests.swift */,
+				CBC74C2B1AA7A0F000270D65 /* ViewExtensionTests.swift */,
 			);
 			path = Tests;
+			sourceTree = "<group>";
+		};
+		CBFB128C1AACE19900CB092B /* Shims */ = {
+			isa = PBXGroup;
+			children = (
+				CBFB128D1AACE1B700CB092B /* UIKit-AppKit.swift */,
+			);
+			path = Shims;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		CB3482511AACDA140002CD37 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB3482521AACDA140002CD37 /* Dixi.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CBDAAC391AA2114100D3F272 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -189,9 +249,45 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		CBDAAC3B1AA2114100D3F272 /* Dixi */ = {
+		CB177EF81AACEB56003BADE0 /* Dixi OSX Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CBDAAC521AA2114200D3F272 /* Build configuration list for PBXNativeTarget "Dixi" */;
+			buildConfigurationList = CB177F021AACEB56003BADE0 /* Build configuration list for PBXNativeTarget "Dixi OSX Tests" */;
+			buildPhases = (
+				CB177EF51AACEB56003BADE0 /* Sources */,
+				CB177EF61AACEB56003BADE0 /* Frameworks */,
+				CB177EF71AACEB56003BADE0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				CB177F011AACEB56003BADE0 /* PBXTargetDependency */,
+			);
+			name = "Dixi OSX Tests";
+			productName = "Dixi OSX Tests";
+			productReference = CB177EF91AACEB56003BADE0 /* Dixi OSX Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		CB3482451AACDA140002CD37 /* Dixi OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CB3482541AACDA140002CD37 /* Build configuration list for PBXNativeTarget "Dixi OSX" */;
+			buildPhases = (
+				CB3482461AACDA140002CD37 /* Sources */,
+				CB3482501AACDA140002CD37 /* Frameworks */,
+				CB3482511AACDA140002CD37 /* Headers */,
+				CB3482531AACDA140002CD37 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Dixi OSX";
+			productName = Dixi;
+			productReference = CB3482571AACDA140002CD37 /* Dixi.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		CBDAAC3B1AA2114100D3F272 /* Dixi iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CBDAAC521AA2114200D3F272 /* Build configuration list for PBXNativeTarget "Dixi iOS" */;
 			buildPhases = (
 				CBDAAC371AA2114100D3F272 /* Sources */,
 				CBDAAC381AA2114100D3F272 /* Frameworks */,
@@ -202,14 +298,14 @@
 			);
 			dependencies = (
 			);
-			name = Dixi;
+			name = "Dixi iOS";
 			productName = Dixi;
 			productReference = CBDAAC3C1AA2114100D3F272 /* Dixi.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		CBDAAC461AA2114100D3F272 /* DixiTests */ = {
+		CBDAAC461AA2114100D3F272 /* Dixi iOS Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = CBDAAC551AA2114200D3F272 /* Build configuration list for PBXNativeTarget "DixiTests" */;
+			buildConfigurationList = CBDAAC551AA2114200D3F272 /* Build configuration list for PBXNativeTarget "Dixi iOS Tests" */;
 			buildPhases = (
 				CBDAAC431AA2114100D3F272 /* Sources */,
 				CBDAAC441AA2114100D3F272 /* Frameworks */,
@@ -220,9 +316,9 @@
 			dependencies = (
 				CBDAAC4A1AA2114100D3F272 /* PBXTargetDependency */,
 			);
-			name = DixiTests;
+			name = "Dixi iOS Tests";
 			productName = DixiTests;
-			productReference = CBDAAC471AA2114100D3F272 /* DixiTests.xctest */;
+			productReference = CBDAAC471AA2114100D3F272 /* Dixi iOS Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -234,6 +330,9 @@
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "Mihai Damian";
 				TargetAttributes = {
+					CB177EF81AACEB56003BADE0 = {
+						CreatedOnToolsVersion = 6.3;
+					};
 					CBDAAC3B1AA2114100D3F272 = {
 						CreatedOnToolsVersion = 6.3;
 					};
@@ -254,13 +353,29 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				CBDAAC3B1AA2114100D3F272 /* Dixi */,
-				CBDAAC461AA2114100D3F272 /* DixiTests */,
+				CBDAAC3B1AA2114100D3F272 /* Dixi iOS */,
+				CBDAAC461AA2114100D3F272 /* Dixi iOS Tests */,
+				CB3482451AACDA140002CD37 /* Dixi OSX */,
+				CB177EF81AACEB56003BADE0 /* Dixi OSX Tests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CB177EF71AACEB56003BADE0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB3482531AACDA140002CD37 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CBDAAC3A1AA2114100D3F272 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -278,18 +393,46 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CB177EF51AACEB56003BADE0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB177F061AACEB80003BADE0 /* ConstraintTests.swift in Sources */,
+				CB177F071AACEB84003BADE0 /* NSLayoutConstraint.swift in Sources */,
+				CB177F051AACEB7D003BADE0 /* ViewExtensionTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CB3482461AACDA140002CD37 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CB3482471AACDA140002CD37 /* ViewOperators.swift in Sources */,
+				CB3482481AACDA140002CD37 /* CGFloatConvertible.swift in Sources */,
+				CB3482491AACDA140002CD37 /* Float.swift in Sources */,
+				CB34824A1AACDA140002CD37 /* LayoutConstraint.swift in Sources */,
+				CB34824B1AACDA140002CD37 /* Operators.swift in Sources */,
+				CBFB128F1AACE1B700CB092B /* UIKit-AppKit.swift in Sources */,
+				CB34824C1AACDA140002CD37 /* PartialConstraint.swift in Sources */,
+				CB34824D1AACDA140002CD37 /* Double.swift in Sources */,
+				CB34824E1AACDA140002CD37 /* View.swift in Sources */,
+				CB34824F1AACDA140002CD37 /* Int.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CBDAAC371AA2114100D3F272 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CBDAAC631AA218A200D3F272 /* UIViewOperators.swift in Sources */,
+				CBDAAC631AA218A200D3F272 /* ViewOperators.swift in Sources */,
 				CBDAAC6A1AA2484C00D3F272 /* CGFloatConvertible.swift in Sources */,
 				CBDAAC6C1AA248A700D3F272 /* Float.swift in Sources */,
 				CBDAAC5E1AA2178100D3F272 /* LayoutConstraint.swift in Sources */,
 				CBDAAC5B1AA2168000D3F272 /* Operators.swift in Sources */,
+				CBFB128E1AACE1B700CB092B /* UIKit-AppKit.swift in Sources */,
 				CBDAAC601AA2179F00D3F272 /* PartialConstraint.swift in Sources */,
 				CBDAAC6E1AA248C700D3F272 /* Double.swift in Sources */,
-				CBC74C281AA799C700270D65 /* UIView.swift in Sources */,
+				CBC74C281AA799C700270D65 /* View.swift in Sources */,
 				CBDAAC701AA248D900D3F272 /* Int.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -299,7 +442,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBDAAC731AA24B1B00D3F272 /* ConstraintTests.swift in Sources */,
-				CBC74C2C1AA7A0F000270D65 /* UIViewExtensionTests.swift in Sources */,
+				CBC74C2C1AA7A0F000270D65 /* ViewExtensionTests.swift in Sources */,
 				CB01467F1AA39AA500E6811F /* NSLayoutConstraint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -307,14 +450,90 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		CB177F011AACEB56003BADE0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CB3482451AACDA140002CD37 /* Dixi OSX */;
+			targetProxy = CB177F001AACEB56003BADE0 /* PBXContainerItemProxy */;
+		};
 		CBDAAC4A1AA2114100D3F272 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = CBDAAC3B1AA2114100D3F272 /* Dixi */;
+			target = CBDAAC3B1AA2114100D3F272 /* Dixi iOS */;
 			targetProxy = CBDAAC491AA2114100D3F272 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		CB177F031AACEB56003BADE0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DixiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		CB177F041AACEB56003BADE0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = DixiTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		CB3482551AACDA140002CD37 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Dixi/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = Dixi;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		CB3482561AACDA140002CD37 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = Dixi/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = Dixi;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
 		CBDAAC501AA2114200D3F272 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -415,7 +634,7 @@
 				INFOPLIST_FILE = Dixi/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Dixi;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
@@ -432,7 +651,7 @@
 				INFOPLIST_FILE = Dixi/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Dixi;
 				SKIP_INSTALL = YES;
 			};
 			name = Release;
@@ -473,6 +692,23 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CB177F021AACEB56003BADE0 /* Build configuration list for PBXNativeTarget "Dixi OSX Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB177F031AACEB56003BADE0 /* Debug */,
+				CB177F041AACEB56003BADE0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		CB3482541AACDA140002CD37 /* Build configuration list for PBXNativeTarget "Dixi OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CB3482551AACDA140002CD37 /* Debug */,
+				CB3482561AACDA140002CD37 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CBDAAC361AA2114100D3F272 /* Build configuration list for PBXProject "Dixi" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -482,7 +718,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CBDAAC521AA2114200D3F272 /* Build configuration list for PBXNativeTarget "Dixi" */ = {
+		CBDAAC521AA2114200D3F272 /* Build configuration list for PBXNativeTarget "Dixi iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CBDAAC531AA2114200D3F272 /* Debug */,
@@ -491,7 +727,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		CBDAAC551AA2114200D3F272 /* Build configuration list for PBXNativeTarget "DixiTests" */ = {
+		CBDAAC551AA2114200D3F272 /* Build configuration list for PBXNativeTarget "Dixi iOS Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				CBDAAC561AA2114200D3F272 /* Debug */,

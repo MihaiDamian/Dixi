@@ -6,6 +6,12 @@
 //  Copyright (c) 2015 Mihai Damian. All rights reserved.
 //
 
+#if os(iOS)
+    import UIKit
+#else
+    import AppKit
+#endif
+
 
 public protocol CGFloatConvertible {
     func toCGFloat() -> CGFloat
