@@ -60,6 +60,7 @@
 		CB01467E1AA39AA500E6811F /* NSLayoutConstraint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSLayoutConstraint.swift; sourceTree = "<group>"; };
 		CB177EF91AACEB56003BADE0 /* Dixi OSX Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Dixi OSX Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB3482571AACDA140002CD37 /* Dixi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Dixi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CBADC3EF1ABB610C0043CFB1 /* Demo.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = Demo.playground; sourceTree = "<group>"; };
 		CBC74C271AA799C700270D65 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		CBC74C2B1AA7A0F000270D65 /* ViewExtensionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewExtensionTests.swift; sourceTree = "<group>"; };
 		CBDAAC3C1AA2114100D3F272 /* Dixi.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Dixi.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +125,7 @@
 		CBDAAC321AA2114100D3F272 = {
 			isa = PBXGroup;
 			children = (
+				CBADC3EF1ABB610C0043CFB1 /* Demo.playground */,
 				CBDAAC3E1AA2114100D3F272 /* Dixi */,
 				CBDAAC4B1AA2114100D3F272 /* DixiTests */,
 				CBDAAC3D1AA2114100D3F272 /* Products */,
