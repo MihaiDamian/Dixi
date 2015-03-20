@@ -37,5 +37,20 @@ let explicitAxisConstraint = >(view1 >= 50)
 
 Check out the Demo playground for more examples of Dixi in action.
 
+## Complete list of operators
+Operator|Name|Example
+--------|----|------
+-       |Standard spacing between views|view1 - view2
+\|-     |Trailing space to view|view \|- 10
+-\|     |Leading space to view|10 -\| view
+\|\|    |Flush views|view1\|\|view2
+>=      |Width/height greater or equal than|view >= 50
+<=      |Width/height smaller or equal than|view <= 50
+==      |Width/height equal to|view1 == view2
+\|-\|   |Leading/trailing/top/bottom distance to superview|10 \|-\| view
+~       |Priority|(view >= 50) ~ 20
+^       |Vertical axis|^(view == 10)
+>       |Horizontal axis|>(view == 10)
+
 ## License
 Dixi is licensed under MIT license.
