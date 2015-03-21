@@ -22,10 +22,6 @@ public func |- (view: View, constant: CGFloat) -> PartialConstraint {
     return PartialConstraint(secondItem: view, constant: constant)
 }
 
-public func >= <T: CGFloatConvertible> (view: View, constant: T) -> LayoutConstraint {
-    return view >= constant.toCGFloat()
-}
-
 private func sizeConstraintWithView(view: View, #constant: CGFloat, #relation: NSLayoutRelation) -> LayoutConstraint {
     var constraint = LayoutConstraint()
     constraint.firstItem = view
@@ -35,8 +31,26 @@ private func sizeConstraintWithView(view: View, #constant: CGFloat, #relation: N
     return constraint
 }
 
+private func sizeConstraintWithLeftView(leftView: View, #rightView: View, #relation: NSLayoutRelation) -> LayoutConstraint {
+    var constraint = LayoutConstraint()
+    constraint.firstItem = leftView
+    constraint.firstItemAttribute = .Size
+    constraint.relation = relation
+    constraint.secondItem = rightView
+    constraint.secondItemAttribute = .Size
+    return constraint
+}
+
+public func >= <T: CGFloatConvertible> (view: View, constant: T) -> LayoutConstraint {
+    return view >= constant.toCGFloat()
+}
+
 public func >= (view: View, constant: CGFloat) -> LayoutConstraint {
     return sizeConstraintWithView(view, constant: constant, relation: .GreaterThanOrEqual)
+}
+
+public func >= (leftView: View, rightView: View) -> LayoutConstraint {
+    return sizeConstraintWithLeftView(leftView, rightView: rightView, relation: .GreaterThanOrEqual)
 }
 
 public func <= <T: CGFloatConvertible> (view: View, constant: T) -> LayoutConstraint {
@@ -45,6 +59,10 @@ public func <= <T: CGFloatConvertible> (view: View, constant: T) -> LayoutConstr
 
 public func <= (view: View, constant: CGFloat) -> LayoutConstraint {
     return sizeConstraintWithView(view, constant: constant, relation: .LessThanOrEqual)
+}
+
+public func <= (leftView: View, rightView: View) -> LayoutConstraint {
+    return sizeConstraintWithLeftView(leftView, rightView: rightView, relation: .LessThanOrEqual)
 }
 
 public func == <T: CGFloatConvertible> (view: View, constant: T) -> LayoutConstraint {

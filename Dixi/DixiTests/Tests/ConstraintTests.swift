@@ -25,7 +25,7 @@ class ConstraintTests: XCTestCase {
         return NSLayoutConstraint.constraintsWithVisualFormat(format, options: options, metrics: metrics, views: views).first! as! NSLayoutConstraint
     }
     
-    func testWidthGreaterThan() {
+    func testWidthGreaterThanConstant() {
         
         let view = View()
         let width = 50
@@ -37,7 +37,19 @@ class ConstraintTests: XCTestCase {
         XCTAssert(expectedConstraint == dixiConstraint, "Constraints should be identical")
     }
     
-    func testWidthLessThan() {
+    func testWidthGreaterThanView() {
+        
+        let leftView = View()
+        let rightView = View()
+        let expectedConstraint = constraintWithVisualFormat("[leftView(>=rightView)]",
+            metrics: nil,
+            views: ["leftView": leftView, "rightView": rightView])
+        let dixiConstraint = (leftView >= rightView).autolayoutConstraint
+        
+        XCTAssert(expectedConstraint == dixiConstraint, "Constraints should be identical")
+    }
+    
+    func testWidthLessThanConstant() {
         
         let view = View()
         let width = 50
@@ -45,6 +57,18 @@ class ConstraintTests: XCTestCase {
             metrics: ["width": width],
             views: ["view": view])
         let dixiConstraint = (view <= width).autolayoutConstraint
+        
+        XCTAssert(expectedConstraint == dixiConstraint, "Constraints should be identical")
+    }
+    
+    func testWidthLessThanView() {
+        
+        let leftView = View()
+        let rightView = View()
+        let expectedConstraint = constraintWithVisualFormat("[leftView(<=rightView)]",
+            metrics: nil,
+            views: ["leftView": leftView, "rightView": rightView])
+        let dixiConstraint = (leftView <= rightView).autolayoutConstraint
         
         XCTAssert(expectedConstraint == dixiConstraint, "Constraints should be identical")
     }
