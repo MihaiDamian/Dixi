@@ -104,8 +104,8 @@ public prefix func ^ (constraint: LayoutConstraint) -> LayoutConstraint {
     return constraint
 }
 
-public prefix func ^ (constraint: [LayoutConstraint]) -> [LayoutConstraint] {
-    return constraint.map { ^$0 }
+public prefix func ^ (constraints: [LayoutConstraint]) -> [LayoutConstraint] {
+    return constraints.map { ^$0 }
 }
 
 public prefix func > (constraint: LayoutConstraint) -> LayoutConstraint {
@@ -114,8 +114,8 @@ public prefix func > (constraint: LayoutConstraint) -> LayoutConstraint {
     return constraint
 }
 
-public prefix func > (constraint: [LayoutConstraint]) -> [LayoutConstraint] {
-    return constraint.map { >$0 }
+public prefix func > (constraints: [LayoutConstraint]) -> [LayoutConstraint] {
+    return constraints.map { >$0 }
 }
 
 public func ~ (constraint: LayoutConstraint, priority: LayoutPriority) -> LayoutConstraint {
