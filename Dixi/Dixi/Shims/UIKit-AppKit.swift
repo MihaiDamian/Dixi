@@ -8,6 +8,9 @@
 
 import Foundation
 
+
+// Shims used for keeping the library agnostic of differences between UIKit and AppKit.
+
 #if os(iOS)
     import UIKit
     public typealias View = UIView

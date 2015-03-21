@@ -16,10 +16,20 @@ import Foundation
 
 extension View {
     
+    /**
+        Add a Dixi constraint as a NSLayoutConstraint.
+        
+        :param: constraint The constraint to be added to the view.
+    */
     public func addConstraint(constraint: LayoutConstraint) {
         addConstraint(constraint.autolayoutConstraint)
     }
     
+    /**
+        Add an array of Dixi constraints as NSLayoutConstraints
+    
+        :param: constraints The array of constraints to be added to the view.
+    */
     public func addConstraints(constraints: [LayoutConstraint]) {
         constraints.map { self.addConstraint($0) }
     }

@@ -14,6 +14,11 @@ import Foundation
 #endif
 
 
+/**
+    A PartialConstraint is used as an opaque, intermediate structure, in situations where a fully specified constraint
+    can't be constructed by a single operator. A PartialConstraint is not a valid constraint and can't be converted to
+    NSLayoutConstraint.
+*/
 public struct PartialConstraint {
     
     let secondItem: View
@@ -21,6 +26,13 @@ public struct PartialConstraint {
 }
 
 
+/**
+    Leading distance to view operator. See also |- (the trailing distance operator).
+
+    :param: partialConstraint A PartialConstraint.
+    :param: view A view that has a leading distance to the view specified by the PartialConstraint.
+    :returns: A LayoutConstraint that defined a distance between two views.
+*/
 public func -| (partialConstraint: PartialConstraint, view: View) -> LayoutConstraint {
     
     var constraint = LayoutConstraint()

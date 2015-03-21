@@ -13,6 +13,10 @@
 #endif
 
 
+/**
+    Types implementing this protocol may be converted to CGFloat with or without loss of precision.
+*/
 public protocol CGFloatConvertible {
+    
     func toCGFloat() -> CGFloat
 }
