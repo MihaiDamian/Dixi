@@ -1,3 +1,5 @@
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+
 Dixi is a collection of Swift operators for creating autolayout constraints.
 
 ## Is Dixi ready for production?
