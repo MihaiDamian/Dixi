@@ -28,7 +28,7 @@ public struct LayoutConstraint {
         case TrailingOrBottomToSuperview
     }
     
-    var axis = Axis.Horizontal
+    private var axis = Axis.Horizontal
     
     var firstItem: View!
     var firstItemAttribute: LayoutAttribute!
@@ -36,7 +36,7 @@ public struct LayoutConstraint {
     var secondItem: View?
     var secondItemAttribute: LayoutAttribute?
     var constant: CGFloat = 0
-    var priority: LayoutPriority?
+    private var priority: LayoutPriority?
     
     public var autolayoutConstraint: NSLayoutConstraint {
         var constraint = NSLayoutConstraint(item: firstItem,
