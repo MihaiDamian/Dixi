@@ -1,9 +1,8 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
+[![Pod version](https://img.shields.io/cocoapods/v/Dixi.svg)](https://cocoapods.org/?q=dixi)
+[![Pod Platform](http://img.shields.io/cocoapods/p/Dixi.svg)](http://cocoadocs.org/docsets/Dixi/)
 
 Dixi is a collection of Swift operators for creating autolayout constraints.
-
-## Is Dixi ready for production?
-Dixi is written in Swift 1.2. The compiler for this version of Swift is currently available only in beta Xcode releases. Do not use Dixi if you plan to publish on the AppStore before the beta period ends.
 
 ## Why use Dixi?
 The iOS/OS X SDK provides two methods of constructing constraints from code: by explicitly configuring the constraint parameters or with the aid of the [visual format language](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/VisualFormatLanguage/VisualFormatLanguage.html). The first option offers the full power of the API but is the most tedious to write. The second option covers most commonly used functionality and is simpler to write. However, since it's string based, the specifiers are only evaluated at runtime, letting potential errors slip through.
@@ -14,6 +13,20 @@ Dixi offers all the functionality of the visual format language, except writing 
 - Swift 1.2 (Xcode 6.3)
 - iOS 8.0 or OS X 10.9
 
+## Installing
+
+#### Install with Carthage
+Drop this line in your Cartfile:
+```ruby
+github "MihaiDamian/Dixi" ~> 0.1
+```
+
+#### Install with Cocoapods
+Drop this line in your Podfile:
+```ruby
+pod 'Dixi', '~> 0.1'
+```
+
 ## Using Dixi
 Dixi allows you to create autolayout constraints using a concise and type safe notation with the aid of some custom operators. The syntax is designed to resemble Apple's visual format language, though there are some differences.
 
@@ -21,7 +34,7 @@ Here's how to create a constraint that defines a 10 points horizontal distance b
 ```swift
 let horizontalDistanceConstraint = view1 |- 10 -| view2
 ```
-
+ca
 Dixi operators create LayoutConstraint objects that can be transformed into NSLayoutConstraint objects or added directly to views:
 ```swift
 superview.addConstraint(horizontalDistanceConstraint)
