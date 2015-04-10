@@ -2,7 +2,7 @@
 [![Pod version](https://img.shields.io/cocoapods/v/Dixi.svg)](https://cocoapods.org/?q=dixi)
 [![Pod Platform](http://img.shields.io/cocoapods/p/Dixi.svg)](http://cocoadocs.org/docsets/Dixi/)
 
-Dixi is a collection of Swift operators for creating autolayout constraints.
+Dixi is a collection of Swift operators for creating autolayout constraints inspired by Apple's visual format language.
 
 ## Why use Dixi?
 The iOS/OS X SDK provides two methods of constructing constraints from code: by explicitly configuring the constraint parameters or with the aid of the [visual format language](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/VisualFormatLanguage/VisualFormatLanguage.html). The first option offers the full power of the API but is the most tedious to write. The second option covers most commonly used functionality and is simpler to write. However, since it's string based, the specifiers are only evaluated at runtime, letting potential errors slip through.
