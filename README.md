@@ -1,6 +1,7 @@
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Pod version](https://img.shields.io/cocoapods/v/Dixi.svg)](https://cocoapods.org/?q=dixi)
 [![Pod Platform](http://img.shields.io/cocoapods/p/Dixi.svg)](http://cocoadocs.org/docsets/Dixi/)
+[![Build Status](https://travis-ci.org/MihaiDamian/Dixi.svg?branch=master)](https://travis-ci.org/MihaiDamian/Dixi)
 
 Dixi is a collection of Swift operators for creating autolayout constraints inspired by Apple's visual format language.
 
