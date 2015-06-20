@@ -17,9 +17,9 @@ import Foundation
 /**
     Trailing distance to view operator. See also -| (the leading distance operator).
 
-    :param: view The constraint's initial view.
-    :param: constant The trailing/bottom distance.
-    :returns: A PartialConstraint that specifies the trailing distance to a yet to be defined view. This constraint should be used as an input to the leading distance to view operator.
+    - parameter view: The constraint's initial view.
+    - parameter constant: The trailing/bottom distance.
+    - returns: A PartialConstraint that specifies the trailing distance to a yet to be defined view. This constraint should be used as an input to the leading distance to view operator.
 */
 public func |- <T: CGFloatConvertible> (view: View, constant: T) -> PartialConstraint {
     return view |- constant.toCGFloat()
@@ -28,15 +28,15 @@ public func |- <T: CGFloatConvertible> (view: View, constant: T) -> PartialConst
 /**
     Trailing distance to view operator.
 
-    :param: view The constraint's initial view.
-    :param: constant The trailing/bottom distance.
-    :returns: A PartialConstraint that specifies the trailing distance to a yet to be defined view. This constraint should be used as an input to the leading distance to view operator.
+    - parameter view: The constraint's initial view.
+    - parameter constant: The trailing/bottom distance.
+    - returns: A PartialConstraint that specifies the trailing distance to a yet to be defined view. This constraint should be used as an input to the leading distance to view operator.
 */
 public func |- (view: View, constant: CGFloat) -> PartialConstraint {
     return PartialConstraint(secondItem: view, constant: constant)
 }
 
-private func sizeConstraintWithView(view: View, #constant: CGFloat, #relation: NSLayoutRelation) -> LayoutConstraint {
+private func sizeConstraintWithView(view: View, constant: CGFloat, relation: NSLayoutRelation) -> LayoutConstraint {
     var constraint = LayoutConstraint()
     constraint.firstItem = view
     constraint.firstItemAttribute = .Size
@@ -45,7 +45,7 @@ private func sizeConstraintWithView(view: View, #constant: CGFloat, #relation: N
     return constraint
 }
 
-private func sizeConstraintWithLeftView(leftView: View, #rightView: View, #relation: NSLayoutRelation) -> LayoutConstraint {
+private func sizeConstraintWithLeftView(leftView: View, rightView: View, relation: NSLayoutRelation) -> LayoutConstraint {
     var constraint = LayoutConstraint()
     constraint.firstItem = leftView
     constraint.firstItemAttribute = .Size
@@ -58,9 +58,9 @@ private func sizeConstraintWithLeftView(leftView: View, #rightView: View, #relat
 /**
     Width greater or equal than constant operator.
 
-    :param: view The constraint's view.
-    :param: constant The width.
-    :returns: A LayoutConstraint specifying the view's width to be greater than the constant.
+    - parameter view: The constraint's view.
+    - parameter constant: The width.
+    - returns: A LayoutConstraint specifying the view's width to be greater than the constant.
 */
 public func >= <T: CGFloatConvertible> (view: View, constant: T) -> LayoutConstraint {
     return view >= constant.toCGFloat()
@@ -69,9 +69,9 @@ public func >= <T: CGFloatConvertible> (view: View, constant: T) -> LayoutConstr
 /**
     Width greater or equal than constant operator.
 
-    :param: view The constraint's view.
-    :param: constant The width.
-    :returns: A LayoutConstraint specifying the view's width to be greater than the constant.
+    - parameter view: The constraint's view.
+    - parameter constant: The width.
+    - returns: A LayoutConstraint specifying the view's width to be greater than the constant.
 */
 public func >= (view: View, constant: CGFloat) -> LayoutConstraint {
     return sizeConstraintWithView(view, constant: constant, relation: .GreaterThanOrEqual)
@@ -80,9 +80,9 @@ public func >= (view: View, constant: CGFloat) -> LayoutConstraint {
 /**
     Width greater or equal than view operator.
 
-    :param: leftView The first view in the constraint.
-    :param: rightView The second view in the constraint.
-    :returns: A LayoutConstraint specifying the first view's width to be greater or equal to the second view's width.
+    - parameter leftView: The first view in the constraint.
+    - parameter rightView: The second view in the constraint.
+    - returns: A LayoutConstraint specifying the first view's width to be greater or equal to the second view's width.
 */
 public func >= (leftView: View, rightView: View) -> LayoutConstraint {
     return sizeConstraintWithLeftView(leftView, rightView: rightView, relation: .GreaterThanOrEqual)
@@ -91,9 +91,9 @@ public func >= (leftView: View, rightView: View) -> LayoutConstraint {
 /**
     Width smaller or equal than constant operator.
 
-    :param: view The constraint's view.
-    :param: constant The width.
-    :returns: A LayoutConstraint specifying the view's width to be smaller than the constant.
+    - parameter view: The constraint's view.
+    - parameter constant: The width.
+    - returns: A LayoutConstraint specifying the view's width to be smaller than the constant.
 */
 public func <= <T: CGFloatConvertible> (view: View, constant: T) -> LayoutConstraint {
     return view <= constant.toCGFloat()
@@ -102,9 +102,9 @@ public func <= <T: CGFloatConvertible> (view: View, constant: T) -> LayoutConstr
 /**
     Width smaller or equal than constant operator.
 
-    :param: view The constraint's view.
-    :param: constant The width.
-    :returns: A LayoutConstraint specifying the view's width to be smaller than the constant.
+    - parameter view: The constraint's view.
+    - parameter constant: The width.
+    - returns: A LayoutConstraint specifying the view's width to be smaller than the constant.
 */
 public func <= (view: View, constant: CGFloat) -> LayoutConstraint {
     return sizeConstraintWithView(view, constant: constant, relation: .LessThanOrEqual)
@@ -113,9 +113,9 @@ public func <= (view: View, constant: CGFloat) -> LayoutConstraint {
 /**
     Width smaller or equal than view operator.
 
-    :param: leftView The first view in the constraint.
-    :param: rightView The second view in the constraint.
-    :returns: A LayoutConstraint specifying the first view's width to be smaller or equal to the second view's width.
+    - parameter leftView: The first view in the constraint.
+    - parameter rightView: The second view in the constraint.
+    - returns: A LayoutConstraint specifying the first view's width to be smaller or equal to the second view's width.
 */
 public func <= (leftView: View, rightView: View) -> LayoutConstraint {
     return sizeConstraintWithLeftView(leftView, rightView: rightView, relation: .LessThanOrEqual)
@@ -124,9 +124,9 @@ public func <= (leftView: View, rightView: View) -> LayoutConstraint {
 /**
     Width equal to constant operator.
 
-    :param: view The constraint's view.
-    :param: constant The width.
-    :returns: A LayoutConstraint specifying the view's width to be equal to a constant.
+    - parameter view: The constraint's view.
+    - parameter constant: The width.
+    - returns: A LayoutConstraint specifying the view's width to be equal to a constant.
 */
 public func == <T: CGFloatConvertible> (view: View, constant: T) -> LayoutConstraint {
     return view == constant.toCGFloat()
@@ -135,9 +135,9 @@ public func == <T: CGFloatConvertible> (view: View, constant: T) -> LayoutConstr
 /**
     Width equal to constant operator.
 
-    :param: view The constraint's view.
-    :param: constant The width.
-    :returns: A LayoutConstraint specifying the view's width to be equal to a constant.
+    - parameter view: The constraint's view.
+    - parameter constant: The width.
+    - returns: A LayoutConstraint specifying the view's width to be equal to a constant.
 */
 public func == (view: View, constant: CGFloat) -> LayoutConstraint {
     return sizeConstraintWithView(view, constant: constant, relation: .Equal)
@@ -146,9 +146,9 @@ public func == (view: View, constant: CGFloat) -> LayoutConstraint {
 /**
     Width equal to view operator.
 
-    :param: leftView The first view in the constraint.
-    :param: rightView The second view in the constraint.
-    :returns: A LayoutConstraint specifying the first view's width to be equal to the second view's width.
+    - parameter leftView: The first view in the constraint.
+    - parameter rightView: The second view in the constraint.
+    - returns: A LayoutConstraint specifying the first view's width to be equal to the second view's width.
 */
 public func == (leftView: View, rightView: View) -> LayoutConstraint {
     var constraint = LayoutConstraint()
@@ -163,9 +163,9 @@ public func == (leftView: View, rightView: View) -> LayoutConstraint {
 /**
     Leading distance to superview operator.
 
-    :param: constant The leading distance to the superview.
-    :param: view The view that needs to be distanced from the superview. The view needs to have a superview.
-    :returns: A LayoutConstraint specifying the leading distance from the view to its superview.
+    - parameter constant: The leading distance to the superview.
+    - parameter view: The view that needs to be distanced from the superview. The view needs to have a superview.
+    - returns: A LayoutConstraint specifying the leading distance from the view to its superview.
 */
 public func |-| <T: CGFloatConvertible> (constant: T, view: View) -> LayoutConstraint {
     return constant.toCGFloat() |-| view
@@ -174,9 +174,9 @@ public func |-| <T: CGFloatConvertible> (constant: T, view: View) -> LayoutConst
 /**
     Leading distance to superview operator.
 
-    :param: constant The leading distance to the superview.
-    :param: view The view that needs to be distanced from the superview. The view needs to have a superview.
-    :returns: A LayoutConstraint specifying the leading distance from the view to its superview.
+    - parameter constant: The leading distance to the superview.
+    - parameter view: The view that needs to be distanced from the superview. The view needs to have a superview.
+    - returns: A LayoutConstraint specifying the leading distance from the view to its superview.
 */
 public func |-| (constant: CGFloat, view: View) -> LayoutConstraint {
     assert(view.superview != nil, "Can't use `distance to superview` operator on view that has no superview")
@@ -194,9 +194,9 @@ public func |-| (constant: CGFloat, view: View) -> LayoutConstraint {
 /**
     Trailing distance to superview operator.
 
-    :param: view The view that needs to be distanced from the superview. The view needs to have a superview.
-    :param: constant The trailing distance to the superview.
-    :returns: A LayoutConstraint specifying the trailing distance from the view to its superview.
+    - parameter view: The view that needs to be distanced from the superview. The view needs to have a superview.
+    - parameter constant: The trailing distance to the superview.
+    - returns: A LayoutConstraint specifying the trailing distance from the view to its superview.
 */
 public func |-| <T: CGFloatConvertible> (view: View, constant: T) -> LayoutConstraint {
     return view |-| constant.toCGFloat()
@@ -205,9 +205,9 @@ public func |-| <T: CGFloatConvertible> (view: View, constant: T) -> LayoutConst
 /**
     Trailing distance to superview operator.
 
-    :param: view The view that needs to be distanced from the superview. The view needs to have a superview.
-    :param: constant The trailing distance to the superview.
-    :returns: A LayoutConstraint specifying the trailing distance from the view to its superview.
+    - parameter view: The view that needs to be distanced from the superview. The view needs to have a superview.
+    - parameter constant: The trailing distance to the superview.
+    - returns: A LayoutConstraint specifying the trailing distance from the view to its superview.
 */
 public func |-| (view: View, constant: CGFloat) -> LayoutConstraint {
     assert(view.superview != nil, "Can't use `distance to superview` operator on view that has no superview")
@@ -225,9 +225,9 @@ public func |-| (view: View, constant: CGFloat) -> LayoutConstraint {
 /**
     Flush views operator.
 
-    :param: leftView The first view of the constraint.
-    :param: rightView The second view of the constraint.
-    :returns: A LayoutConstraint specifying a distance of 0 points between the two views.
+    - parameter leftView: The first view of the constraint.
+    - parameter rightView: The second view of the constraint.
+    - returns: A LayoutConstraint specifying a distance of 0 points between the two views.
 */
 public func || (leftView: View, rightView: View) -> LayoutConstraint {
     
@@ -243,9 +243,9 @@ public func || (leftView: View, rightView: View) -> LayoutConstraint {
 /**
     Standard distance operator.
 
-    :param: leftView The first view of the constraint.
-    :param: rightView The second view of the constraint.
-    :returns: A LayoutConstraint specifying a standard (8 points) distance between the two views.
+    - parameter leftView: The first view of the constraint.
+    - parameter rightView: The second view of the constraint.
+    - returns: A LayoutConstraint specifying a standard (8 points) distance between the two views.
 */
 public func - (leftView: View, rightView: View) -> LayoutConstraint {
     

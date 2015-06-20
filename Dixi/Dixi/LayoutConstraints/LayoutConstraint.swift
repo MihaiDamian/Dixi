@@ -45,7 +45,7 @@ public struct LayoutConstraint {
         The NSLayoutConstraint representation of the LayoutConstraint.
     */
     public var autolayoutConstraint: NSLayoutConstraint {
-        var constraint = NSLayoutConstraint(item: firstItem,
+        let constraint = NSLayoutConstraint(item: firstItem,
             attribute: autolayoutFirstItemAttribute,
             relatedBy: relation,
             toItem: secondItem,
@@ -107,8 +107,8 @@ public struct LayoutConstraint {
 /**
     Vertical axis operator.
 
-    :param: constraint Any LayoutConstraint.
-    :returns: A LayoutConstraint that defines all relations between views on the vertical axis (e.g. top distance, height, bottom distance).
+    - parameter constraint: Any LayoutConstraint.
+    - returns: A LayoutConstraint that defines all relations between views on the vertical axis (e.g. top distance, height, bottom distance).
 */
 public prefix func ^ (constraint: LayoutConstraint) -> LayoutConstraint {
     var constraint = constraint
@@ -119,8 +119,8 @@ public prefix func ^ (constraint: LayoutConstraint) -> LayoutConstraint {
 /**
     Vertical axis operator.
 
-    :param: constraints An array of LayoutConstraints.
-    :returns: An array of LayoutConstraints that define all relations between views on the vertical axis (e.g. top distance, height, bottom distance).
+    - parameter constraints: An array of LayoutConstraints.
+    - returns: An array of LayoutConstraints that define all relations between views on the vertical axis (e.g. top distance, height, bottom distance).
 */
 public prefix func ^ (constraints: [LayoutConstraint]) -> [LayoutConstraint] {
     return constraints.map { ^$0 }
@@ -129,8 +129,8 @@ public prefix func ^ (constraints: [LayoutConstraint]) -> [LayoutConstraint] {
 /**
     Horizontal axis operator. By default all constraints are defined on the horizontal axis. This operator is optional.
 
-    :param: constraint Any LayoutConstraint.
-    :returns: A LayoutConstraint that defines all relations between views on the horizontal axis (e.g. leading distance, width, trailing distance).
+    - parameter constraint: Any LayoutConstraint.
+    - returns: A LayoutConstraint that defines all relations between views on the horizontal axis (e.g. leading distance, width, trailing distance).
 */
 public prefix func > (constraint: LayoutConstraint) -> LayoutConstraint {
     var constraint = constraint
@@ -141,8 +141,8 @@ public prefix func > (constraint: LayoutConstraint) -> LayoutConstraint {
 /**
     Horizontal axis operator. By default all constraints are defined on the horizontal axis. This operator is optional.
 
-    :param: constraints An array of LayoutConstraints.
-    :returns: An array of LayoutConstraints that define all relations between views on the vertical axis (e.g. leading distance, width, trailing distance).
+    - parameter constraints: An array of LayoutConstraints.
+    - returns: An array of LayoutConstraints that define all relations between views on the vertical axis (e.g. leading distance, width, trailing distance).
 */
 public prefix func > (constraints: [LayoutConstraint]) -> [LayoutConstraint] {
     return constraints.map { >$0 }
@@ -151,9 +151,9 @@ public prefix func > (constraints: [LayoutConstraint]) -> [LayoutConstraint] {
 /**
     Priority operator.
 
-    :param: Any LayoutConstraint.
-    :param: priority A layout priority value.
-    :returns: A constraint with the specified priority.
+    - parameter Any: LayoutConstraint.
+    - parameter priority: A layout priority value.
+    - returns: A constraint with the specified priority.
 */
 public func ~ (constraint: LayoutConstraint, priority: LayoutPriority) -> LayoutConstraint {
     var constraint = constraint

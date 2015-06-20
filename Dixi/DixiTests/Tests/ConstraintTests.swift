@@ -18,11 +18,11 @@ import Dixi
 class ConstraintTests: XCTestCase {
     
     private func constraintWithVisualFormat(format: String,
-        options: NSLayoutFormatOptions = NSLayoutFormatOptions(0),
-        metrics: [String: AnyObject]?,
+        options: NSLayoutFormatOptions = NSLayoutFormatOptions(rawValue: 0),
+        metrics: [String: NSNumber]?,
         views: [String: View]) -> NSLayoutConstraint {
             
-        return NSLayoutConstraint.constraintsWithVisualFormat(format, options: options, metrics: metrics, views: views).first! as! NSLayoutConstraint
+        return NSLayoutConstraint.constraintsWithVisualFormat(format, options: options, metrics: metrics, views: views).first!
     }
     
     func testWidthGreaterThanConstant() {

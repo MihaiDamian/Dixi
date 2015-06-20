@@ -27,6 +27,3 @@ public func == (leftConstraint: NSLayoutConstraint, rightConstraint: NSLayoutCon
     
     return equalPriority && equalFirstItem && equalFirstAttribute && equalRelation && equalSecondItem && equalSecondAttribute && equalMultiplier && equalConstant
 }
-
-
-extension NSLayoutConstraint: Equatable {}

@@ -29,9 +29,9 @@ public struct PartialConstraint {
 /**
     Leading distance to view operator. See also |- (the trailing distance operator).
 
-    :param: partialConstraint A PartialConstraint.
-    :param: view A view that has a leading distance to the view specified by the PartialConstraint.
-    :returns: A LayoutConstraint that defined a distance between two views.
+    - parameter partialConstraint: A PartialConstraint.
+    - parameter view: A view that has a leading distance to the view specified by the PartialConstraint.
+    - returns: A LayoutConstraint that defined a distance between two views.
 */
 public func -| (partialConstraint: PartialConstraint, view: View) -> LayoutConstraint {
     
