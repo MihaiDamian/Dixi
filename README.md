@@ -22,7 +22,7 @@ Drop this line in your Cartfile:
 github "MihaiDamian/Dixi" ~> 0.1
 ```
 
-#### Install with Cocoapods
+#### Install with CocoaPods
 Drop this line in your Podfile:
 ```ruby
 pod 'Dixi', '~> 0.1'
